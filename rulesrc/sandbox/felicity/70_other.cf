@@ -305,7 +305,7 @@ ifplugin Mail::SpamAssassin::Plugin::MIMEEval
 #  0.798   0.9651   0.0000    1.000   0.86    0.00  BASE64_LENGTH_79_INF
 #  0.170   0.2047   0.0020    0.990   0.69    0.00  BASE64_LENGTH_78_79
 body BASE64_LENGTH_78_79        eval:check_base64_length('78','79')
-describe BASE64_LENGTH_79_INF   base64 encoded email part uses line length of 78 or 79 characters
+describe BASE64_LENGTH_78_79   base64 encoded email part uses line length of 78 or 79 characters
 
 body BASE64_LENGTH_79_INF       eval:check_base64_length('79')
 describe BASE64_LENGTH_79_INF   base64 encoded email part uses line length greater than 79 characters
