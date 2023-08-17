@@ -46,11 +46,13 @@ might help fine-tuning settings.
 
 Examples of using X-Languages header directly in rules:
 
- header OK_LANGS X-Languages =~ /\ben\b/
- score OK_LANGS -1
+ header   OK_LANGS X-Languages =~ /\ben\b/
+ describe OK_LANGS description of acceptable languages for users to read in reports
+ score    OK_LANGS -1
 
- header BAD_LANGS X-Languages =~ /\b(?:ja|zh)\b/
- score BAD_LANGS 1
+ header   BAD_LANGS X-Languages =~ /\b(?:ja|zh)\b/
+ describe BAD_LANGS description of bad languages for users to read in reports
+ score    BAD_LANGS 1
 
 =cut
 
