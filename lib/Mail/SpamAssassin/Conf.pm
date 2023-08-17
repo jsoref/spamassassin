@@ -4640,8 +4640,9 @@ For example:
 	loadplugin MyPlugin plugintest.pm
 
 	if plugin (MyPlugin)
-	  header MY_PLUGIN_FOO	eval:check_for_foo()
-	  score  MY_PLUGIN_FOO	0.1
+	  header   MY_PLUGIN_FOO	eval:check_for_foo()
+	  describe MY_PLUGIN_FOO	You should describe foo so users understand what it means
+	  score    MY_PLUGIN_FOO	0.1
 	endif
 
 =item ifplugin PluginModuleName
