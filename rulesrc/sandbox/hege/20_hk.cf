@@ -97,6 +97,7 @@ score		HK_UNSUB_TMPL		1
 #score		HK_EMPTY_DKIM_S		1
 
 header		HK_RCVD_IP_MULTICAST	X-Spam-Relays-External =~ / ip=(?:22[4-9]|23[0-9])\./
+describe	HK_RCVD_IP_MULTICAST	Message came from a multicast ip block
 score		HK_RCVD_IP_MULTICAST	2
 tflags		HK_RCVD_IP_MULTICAST	publish
 
@@ -165,6 +166,7 @@ body		__hk_win_m		/\br.clamation de votre prix/i
 body		__hk_win_n		/\bcollect your prize/i
 body		__hk_win_o		/\bclarification and procedure/i
 meta		HK_WIN			((__hk_win_2 + __hk_win_3 + __hk_win_4 + __hk_win_5 + __hk_win_7 + __hk_win_8 + __hk_win_9 + __hk_win_0 + __hk_win_a + __hk_win_b + __hk_win_c + __hk_win_d + __hk_win_i + __hk_win_j + __hk_win_l + __hk_win_m + __hk_win_n + __hk_win_o) >= 2)
+describe	HK_WIN			Lottery scam
 score		HK_WIN			1
 
 #body		__HK_LOTTO_1		/\b(?:(?:inter)?national|foundation|mercato|univers|euro ?million|e-?mail|euro-pw|bill ?gates|swiss|prestige|cristal|am.ricaine|coca.?cola|fiduciary|department) ?lot(?:eri[ej]|t(?:ery|o))/i
@@ -202,6 +204,7 @@ body		__HK_SCAM_S25		/\bbank (?:in|of) ghana/i
 #body		__HK_SCAM_S22		/\bmining companies/i
 #body		__HK_SCAM_S23		/(?:\b(?:urgent alert|start trade|get it at monday)\b|\b(?:5-|five )day price:)/i
 meta		HK_SCAM			__HK_SCAM_N2 || __HK_SCAM_N3 || __HK_SCAM_N8 || __HK_SCAM_N15 || __HK_SCAM_N16 || __HK_SCAM_S1 || __HK_SCAM_S15 || __HK_SCAM_S25
+describe	HK_SCAM			Classic scam
 score		HK_SCAM			2
 tflags		HK_SCAM			publish
 
@@ -230,14 +233,18 @@ ifplugin Mail::SpamAssassin::Plugin::FreeMail
 if (version >= 3.004000)
   header	__HK_NAME_MR_MRS	From:name =~ /^M(?:RS?|ISS)\b/mi
   meta		HK_NAME_MR_MRS		__HK_NAME_MR_MRS && !FREEMAIL_FROM
+  describe	HK_NAME_MR_MRS		From starts with MR/MRS/MISS and it is not a free mail provider
   score		HK_NAME_MR_MRS		1.0
   meta		HK_NAME_FM_MR_MRS	__HK_NAME_MR_MRS && FREEMAIL_FROM
+  describe	HK_NAME_MR_MRS		From starts with MR/MRS/MISS and it is a free mail provider
   score		HK_NAME_FM_MR_MRS	1.5
 
   header	__HK_NAME_FROM		From:name =~ /^FROM\b/mi
   meta		HK_NAME_FROM		__HK_NAME_FROM && !FREEMAIL_FROM
+  describe 	HK_NAME_FROM		From starts with FROM and it is not a free mail provider
   score		HK_NAME_FROM		1.0
   meta		HK_NAME_FM_FROM		__HK_NAME_FROM && FREEMAIL_FROM
+  describe 	HK_NAME_FM_FROM		From starts with FROM and it is a free mail provider
   score		HK_NAME_FM_FROM		1.5
 endif
 
@@ -262,6 +269,7 @@ meta		HK_SPAMMY_FILENAME	__HK_SPAMMY_CTFN || __HK_SPAMMY_CDFN
 
 mimeheader	HK_CTE_RAW		Content-Transfer-Encoding =~ /^raw$/
 score		HK_CTE_RAW		2
+describe	HK_CTE_RAW		Inappropriate Content-Transfer-Encoding (raw)
 tflags		HK_CTE_RAW		publish
 
 mimeheader	__CT_UTF7		Content-Type =~ /\bcharset=.?utf-7\b/i

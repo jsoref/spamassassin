@@ -4,7 +4,9 @@
 # compiler will take care of the hard work of copying them around for me, while
 # they're still working well.
 
+# https://svn.apache.org/viewvc/spamassassin/rules/trunk/sandbox/jm/20_basic.cf?annotate=416079&pathrev=416079
 header MID_DEGREES  Message-ID =~ /^<\d{14}\.[A-F0-9]{10}\@[A-Z0-9]+>$/
+describe MID_DEGREES Message ID from degree spam (2006-06-21)
 ## score MID_DEGREES   3
 
 # from Clifton
@@ -13,13 +15,16 @@ header MID_DEGREES  Message-ID =~ /^<\d{14}\.[A-F0-9]{10}\@[A-Z0-9]+>$/
 header TT_MSGID_TRUNC   Message-Id =~ /^\s*<?[^<>\s]+\[\d+$/
 describe TT_MSGID_TRUNC Scora: Message-Id ends after left-bracket + digits
 
-# testing for Dave Funk (mail of 11/16); compare with AXB_FAKETZ, GMD_FAKETZ.
+# testing for Dave Funk (mail of 2006/11/16); compare with AXB_FAKETZ, GMD_FAKETZ.
+# https://svn.apache.org/viewvc/spamassassin/rules/trunk/sandbox/jm/20_basic.cf?r1=489349&r2=489350&pathrev=489350&
 # pretty good; less FPs than AXB_FAKETZ, however, same FP level but less 0.01%
 # less hits than GMD_FAKETZ, so that's still better
 header L_SPAM_TOOL_13   Date =~ /\s[+-]\d(?![2358]45)\d[124-9]\d$/
+describe L_SPAM_TOOL_13 Date has fake timezone
 ## score  L_SPAM_TOOL_13   3.0
 
 header JM_RCVD_QMAILV1     Received =~ /by \S+ \(Qmailv1\) with ESMTP/
+describe JM_RCVD_QMAILV1   Rare unmaintained mail server (Qmail)
 
 # ---------------------------------------------------------------------------
 # Informational rules
@@ -132,20 +137,27 @@ header __MAILER_OL_6626 X-Mailer =~ /^Microsoft Outlook, Build 10\.0\.6626$/
 header __MOLE_2962  X-MimeOLE =~ /^Produced\ By\ Microsoft\ MimeOLE\ V6\.00\.2900\.2962$/
 header __NAKED_TO   To =~ /^[^\s<>]+\@[^\s<>]+$/
 meta JM_TORA_XM     (__MAILER_OL_6626 && __MOLE_2962 && __NAKED_TO)
+describe JM_TORA_XM Spam from 2012 https://scamsurvivors.com/forum/viewtopic.php?f=6&t=1722&start=230
 
 # HELO as localhost.  we should really be rejecting this at MTA, but hey.
 # it seems most of us let these slip through our MTA configs; 3% of spam, no FPs
 header HELO_LOCALHOST   X-Spam-Relays-External =~ /^[^\]]+ helo=localhost /i
+describe HELO_LOCALHOST Sender claims to be localhost the MTA should have rejected it
 
 header HELO_OEM  X-Spam-Relays-External =~ /^[^\]]+ helo=(?:pc|oem\S*) /i
+describe HELO_OEM  Sending server claims to be `pc` or `oem*`
 
 header HELO_FRIEND  X-Spam-Relays-External =~ /^[^\]]+ helo=friend /i
+describe HELO_FRIEND  Sending server claims to be `friend`
 
+# https://svn.apache.org/viewvc?view=revision&revision=496293
 header MIME_BOUND_EQ_REL    Content-Type =~ /boundary="=====================_\d+==\.REL"/s
+describe MIME_BOUND_EQ_REL  Boundary matches spam from 2006-01-15
 
 body __DBLCLAIM     /avoid double claiming/
 body __CASHPRZ      /cash prize of/
 meta LOTTERY_1      (__DBLCLAIM && __CASHPRZ)
+describe LOTTERY_1  Lottery spam
 
 # ---------------------------------------------------------------------------
 # Testing bit
@@ -165,18 +177,27 @@ describe STOCK_IMG_CTYPE  Stock spam image part, with distinctive Content-Type h
 uri __HAS_ANY_URI   /^\w+:\/\//
 body __HAS_ANY_EMAIL /\w@\S+\.\w/
 meta SB_GIF_AND_NO_URIS (__GIF_ATTACH&&!__HAS_ANY_URI&&!__HAS_ANY_EMAIL)
+describe SB_GIF_AND_NO_URIS Message has gifs, no uri and no email addresses
 
 meta CTYPE_001C_A  (0)      # obsolete
+describe CTYPE_001C_A       This obsolete meta shouldn't trigger -- if you see this, please file a bug
 
 header CTYPE_001C_B Content-Type =~ /multipart.{0,200}boundary=\"----=_NextPart_000_0000_01C[0-9A-F]{5}\.[0-9A-F]{7}0\"/
+describe CTYPE_001C_B Suspicious multipart boundary (?) -- if you can clarify this, please file a PR
 
 header __MSOE_MID_WRONG_CASE   ALL =~ /\nMessage-Id: /
 header __XM_OUTLOOK_EXPRESS    X-Mailer =~ /^Microsoft Outlook Express \d/
 meta MSOE_MID_WRONG_CASE  (__XM_OUTLOOK_EXPRESS && __MSOE_MID_WRONG_CASE && !__MIMEOLE_1106)
+describe MSOE_MID_WRONG_CASE Bulk email software identified by pretending to be Outlook Express
 
+# https://svn.apache.org/viewvc?view=revision&revision=481003
+# https://svn.apache.org/viewvc/spamassassin/rules/trunk/sandbox/jm/20_basic.cf?annotate=481330&pathrev=481330
 header STOX_REPLY_TYPE  Content-Type =~ /text\/plain; .* reply-type=original/
+describe STOX_REPLY_TYPE Suspicious `reply-type`
 body CURR_PRICE         /\bCurrent Price:/
+describe CURR_PRICE     Has suspicious content `Current Price`
 meta STOX_AND_PRICE     CURR_PRICE && STOX_REPLY_TYPE
+describe STOX_AND_PRICE Spam from 2006 with suspicious content `Current Price` and `reply-type`
 
 # bug 5224: basic OE multipart/related check.  see what the overlaps
 # are like
@@ -186,7 +207,9 @@ tflags OE_MULTIPART_RELATED nopublish
 
 # more trials of bad HELO strings
 header HELO_LH_LD   X-Spam-Relays-External =~ /^[^\]]+ helo=localhost\.localdomain /i
+describe HELO_LH_LD Sending server claims to be `localhost.localdomain`
 header HELO_LH_HOME X-Spam-Relays-External =~ /^[^\]]+ helo=\S+\.(?:home|lan) /i
+describe HELO_LH_HOME Sending server claims to be `*.home` or `*.lan`
 
 
 # requested experiment: PBL hitrates on URIs
@@ -212,6 +235,7 @@ header TEMPLATE_203_RCVD    Received =~ /from 192.168.0.\d+ \(203-219-/
 
 # good Message-ID pattern for recent stock spam
 header STOX_BOUND_090909_B Content-Type:raw =~ /;\n boundary=\"------------0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]0[0-9]\"$/s
+describe STOX_BOUND_090909_B Stock spam
 header STOX_UA  User-Agent =~ /^Thunderbird 1.5.0.12 \(Windows\/20070509\)/
 
 meta STOX_META_5 (STOX_BOUND_090909_B && EMPTY_MESSAGE)
@@ -224,6 +248,7 @@ meta CARD_DIRECT_WWW_ADDRESS (__CARD_DIRECT_WWW_ADDRESS && !__LEGIT_MARLO_CARD)
 body __AFF_004470_NUMBER  /(?:\+|00|011)\W{0,3}44\W{0,3}0?\W{0,3}70/
 body __AFF_LOTTERY        /(?:lottery|winner)/i
 meta LOTTERY_PH_004470  (__AFF_004470_NUMBER && __AFF_LOTTERY)
+describe LOTTERY_PH_004470 Lottery spam
 
 # Jo Rhett wants this tested
 meta TVD_PDF_FINGER01_JO  (__TVD_MIME_CT_MM && __TVD_MIME_ATT && !__TVD_BODY)
@@ -237,6 +262,7 @@ header JM_FAKE_PSMTP_RCVD   Received =~ /^from \[\d+\.\d+\.\d+\.\d+\] by \S+\.\S
 # use of the "I Feel Lucky" button in Google, thanks LR
 uri JM_I_FEEL_LUCKY         /(?:\&|\?)btnI=ec(?:$|\&)/
 tflags JM_I_FEEL_LUCKY  publish     # low hitrate, but always a good sign
+describe JM_I_FEEL_LUCKY URI appears to be for Google "I Feel Lucky"
 
 # some auto-discovered header rules
 header JM_0800_GMT      Received =~ / \+0800 \(GMT\)$/
@@ -256,7 +282,9 @@ body JM_NICE_GIRL       /I am nice girl that would like to chat with you\. /
 header __HS_SUBJ_RE_FW Subject =~ /^(?i:re|fw):/
 rawbody __HS_QUOTE /^> /
 
+# https://svn.apache.org/viewvc?view=revision&revision=594329
 meta STOX_REPLY_TYPE_WITHOUT_QUOTES (STOX_REPLY_TYPE && !(__HS_SUBJ_RE_FW || __HS_QUOTE))
+describe STOX_REPLY_TYPE_WITHOUT_QUOTES Suspicious `reply-type` from 2006-2007 without re/fw/quoted content
 
 rawbody IMG_CID_PART1   /<img alt=\"\S*\" src=\"cid:part1\.\d/
 
@@ -303,6 +331,7 @@ describe JM_REACTOR_MAILER Header patterns indicative of "Reactor Mailer" ratwar
 # ACommercialSpamFilter by using a rule which had high "points" given to the
 # mail because it has contained a reply-to but neither To nor Cc.'
 meta REPLYTO_WITHOUT_TO_CC     (__HAS_REPLY_TO && !__TOCC_EXISTS)
+describe REPLYTO_WITHOUT_TO_CC Has reply-to but neither to nor cc
 
 # thanks to Suresh for these tips
 # header FAKE_OUTBLAZE_RCVD_168     X-Spam-Relays-External =~ /^[^\]]+168city\./

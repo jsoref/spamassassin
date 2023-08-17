@@ -74,12 +74,14 @@ describe MSGID_SPAM_LETTERS	Spam tool Message-Id: (letters variant)
 
 
 
+# https://svn.apache.org/viewvc/spamassassin/trunk/rules/20_head_tests.cf?r1=126458&r2=126457&pathrev=126458
 # negative lookahead exempts this MUA from circa 1997-2000
 # X-Mailer: Microsoft Outlook Express 4.71.1712.3
 # Message-ID: <01bd45da$2649cdc0$LocalHost@andrew>
 header __MSGID_DOLLARS_OK	MESSAGEID =~ /<[0-9a-f]{4,}\$[0-9a-f]{4,}\$[0-9a-f]{4,}\@\S+>/
 header __MSGID_DOLLARS_MAYBE	MESSAGEID =~ /<\w{4,}\$\w{4,}\$(?!localhost)\w{4,}\@\S+>/i
 meta MSGID_DOLLARS_RANDOM	__MSGID_DOLLARS_MAYBE && !__MSGID_DOLLARS_OK
+describe MSGID_DOLLARS_RANDOM Spam from 2005 with dollars in the message id
 
 # bit of a ratware rule, but catches a bit more than just the one ratware
 header __MSGID_RANDY		Message-ID =~ /<[a-z\d][a-z\d\$-]{10,29}[a-z\d]\@[a-z\d][a-z\d.]{3,12}[a-z\d]>/

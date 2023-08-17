@@ -6,6 +6,7 @@
 
 header __KB_MSGID_OUTLOOK_888  Message-Id =~ /^<[0-9a-f]{8}(?:\$[0-9a-f]{8}){2}\@/
 meta   KB_RATWARE_MSGID        (__KB_MSGID_OUTLOOK_888 && __ANY_OUTLOOK_MUA)
+describe KB_RATWARE_MSGID      Bulk email software identified by pretending to be Outlook
 
 
 # bug 5817 -- Forged Relay, direct MUA to MX
@@ -37,7 +38,9 @@ meta   FORGED_RELAY_MUA_TO_MX         __FORGED_RELAY_MUA_TO_MX
 
 header   __KB_DATE_CONTAINS_TAB  Date:raw =~ /^\t/
 meta     KB_DATE_CONTAINS_TAB  __KB_DATE_CONTAINS_TAB && !__ML_TURNS_SP_TO_TAB 
+describe KB_DATE_CONTAINS_TAB  Date field contains a tab
 score	 KB_DATE_CONTAINS_TAB  0.5
 
 meta     KB_FAKED_THE_BAT      (__THEBAT_MUA && KB_DATE_CONTAINS_TAB)
+describe KB_FAKED_THE_BAT      Mailer is lying and claims to be The Bat! -- https://www.silverstones.com/thebat/spammer.html
 

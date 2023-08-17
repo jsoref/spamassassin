@@ -140,6 +140,7 @@ body TVD_DEAR_HOMEOWNER         /^dear homeowner/i
 describe TVD_DEAR_HOMEOWNER     Spam with generic salutation of "dear homeowner"
 
 body TVD_ENHANCE                /(?:enhanc(?:e(?:ment)?|ing)|improv(?:e|ing)) .{0,20}sexual (?:stamina|performance)/i
+describe TVD_ENHANCE            Spam about enhancing sexual performance
 body __TVD_GET_STOCK            /(?i:OTC)[^-\/\\'.]{2,8}(?:[A-Z]\s*){3,5}\b/
 meta TVD_GET_STOCK              __TVD_GET_STOCK && !__VIA_ML && !__DKIM_EXISTS && !__LCL__ENV_AND_HDR_FROM_MATCH && !__RP_MATCHES_RCVD && !__BUGGED_IMG && !__MSOE_MID_WRONG_CASE 
 
@@ -231,8 +232,10 @@ describe TVD_FLOAT_GENERAL      Message uses CSS float style
 #rawbody T_TVD_FLOAT_GENERAL5   /\bstyle="[^"]*\bfloat\s*:\s*[a-z]+\s*">\s*[a-zA-Z]\s*</i
 #rawbody T_TVD_FLOAT_GENERAL6   /\bstyle="[^"]*\bfloat\s*:\s*[a-z]+\s*">\s*(?-i:[a-z])+\s*</i
 
+# https://svn.apache.org/viewvc?view=revision&revision=388217
 # 0.504   0.5982   0.0000    1.000   1.00    0.01  TVD_FINGER_02
 header TVD_FINGER_02    Content-Type =~ /^text\/plain(?:; (?:format=flowed|charset="Windows-1252"|reply-type=original)){3}/i
+describe TVD_FINGER_02  Mail from 2006
 
 # 0.238   0.2868   0.0000    1.000   0.98    0.01  TVD_DEAD_JOB
 body TVD_DEAD_JOB /\bTired of working a dead end job\s*\?/i
@@ -333,6 +336,7 @@ endif
 uri TVD_IP_SING_HEX     m@^https?://0x[0-9a-f]+(?:[:/]|$)@i
 # http://127.0.0.0xef/
 uri TVD_IP_HEX  m@^https?://(?:\d+\.){0,3}0x[0-9a-f]{2}@i
+describe TVD_IP_HEX link to hex encoded ip address
 # http://0177.0.0.1/
 uri TVD_IP_OCT  m@^https?://(?:(?:0x[0-9a-f]+|\d+)\.){0,3}0+(?:[1-3][0-7]{0,2}|[4-7][0-7]?)(?:\.(?:0x[0-9a-f]+|\d+)){0,3}(?:[:/]|$)@i
 

@@ -3,6 +3,7 @@
 # same as RCVD_FORGED_WROTE but allowing capitalized host names
 #
 header RCVD_FORGED_WROTE2 Received =~ /from [0-9.]+ \(HELO \S+[A-Za-z]+\) by (\S+) with esmtp \(\S+\s\S+\) id \S{6}-\S{6}-\S\S for \S+@\1;/s
+describe RCVD_FORGED_WROTE2 Forged receive header
 
 header RCVD_FORGED_WROTE3 Received =~ /from \[[0-9.]+\] \(port=\d+ helo=\S+[A-Za-z]+\) by (\S+) with asmtp id \S{6}-\S{6}-\S\S for \S+@\1;/s
 

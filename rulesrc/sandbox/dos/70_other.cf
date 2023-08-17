@@ -161,6 +161,7 @@ body		__DOS_STRONG_CF		/\bstrong cash flow/i
 body		__DOS_STEADY_COURSE	/\bsteady (?:and increasing )?course\b/i
 
 meta		DOS_STOCK_BAT2		DOS_STOCK_BAT && (__DOS_FIN_ADVANTAGE + __DOS_STRONG_CF + __DOS_STEADY_COURSE > 2)
+describe	DOS_STOCK_BAT2		Probable pump and dump stock spam
 
 
 # http://www.fod*rx.com
@@ -283,8 +284,10 @@ header DOS_PORN_BOUNDARY        Content-Type =~ /\bboundary="----\#(?:SUBSTANCE|
 describe DOS_PORN_BOUNDARY      Content boundary common to porn spam
 score DOS_PORN_BOUNDARY         1.0
 
+# This rule was still matching spam in 2011: https://gist.github.com/wmoxam/1238398
 # 20070225
 header X_MAILER_CME_6543_MSN	X-Mailer =~ /^CME-V6\.5\.4\.3; MSN\s*$/
+describe X_MAILER_CME_6543_MSN Spam from 2007-2011
 
 
 # 20070723

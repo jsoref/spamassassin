@@ -1,4 +1,5 @@
 uri	GEO_QUERY_STRING	/^http:\/\/(?:\w{2,4}\.)?geocities\.com(?::\d*)?\/.+?\/\?/i
+describe GEO_QUERY_STRING	Geocities (obsolete web host) query
 
 # 20080928 - One line followed by a live spaces URI, may need more to avoid FPs
 uri DOS_LIVE_SPACES_CID	/^http:\/\/cid-.{10,20}\.spaces\.live\.com\/$/

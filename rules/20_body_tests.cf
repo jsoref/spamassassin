@@ -109,6 +109,7 @@ ifplugin Mail::SpamAssassin::Plugin::MIMEEval
 
 # 0.767   0.9097   0.0000    1.000   0.84    1.00  MULTIPART_ALT_NON_TEXT
 body MULTIPART_ALT_NON_TEXT	eval:check_ma_non_text()
+describe MULTIPART_ALT_NON_TEXT Message claims to have alternatives but doesn't have a text alternative
 
 body CHARSET_FARAWAY		eval:check_for_faraway_charset()
 describe CHARSET_FARAWAY	Character set indicates a foreign language

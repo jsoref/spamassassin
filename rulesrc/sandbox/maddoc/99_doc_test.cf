@@ -16,7 +16,10 @@
 # uri FSL_YG_ABUSE /\/groups\.yahoo\.com\/group\/\S+\/message\/1$/
 # score FSL_YG_ABUSE 15.0
 
+# https://svn.apache.org/viewvc?view=revision&revision=770416
+# https://any.run/report/3bd8686163c39ce8893b4ab731c7cdd580deeec3bece237d286c72ea7286500e/be422501-37b8-41d7-b643-1c44b204acd3
 uri FSL_INTERIA_ABUSE /\/\S+\.(?:w|eu|fm)\.interia\.pl/
+describe FSL_INTERIA_ABUSE Abused interia.pl servers 2009-2019
 # score FSL_INTERIA_ABUSE 15.0
 
 #uri FSL_GEO_ABUSE /\/geocities\.com\/\S+$/
@@ -101,6 +104,7 @@ meta    FSL_STACKED_TEXT (__TWO_WORD_LINES > 10)
 # JHardin: don't hit 127.x.x.x (loopback) addresses
 header  __FSL_HELO_BARE_IP_1      X-Spam-Relays-External =~ /^[^\]]+ helo=(?!127)\d{1,3}\.\d{1,3}\.\d{1,3}\.\d{1,3} [^\]]*auth= /i
 meta    FSL_HELO_BARE_IP_1        __FSL_HELO_BARE_IP_1 && !ALL_TRUSTED
+describe  FSL_HELO_BARE_IP_1      Sending server said HELO by IP instead of domain
 
 # score   FSL_HELO_BARE_IP_1      0.001
 
@@ -111,12 +115,14 @@ header  __FSL_HELO_BARE_IP_2    X-Spam-Relays-Untrusted =~ /helo=(?!127)\d{1,3}\
 meta    FSL_HELO_BARE_IP_2      __FSL_HELO_BARE_IP_2 && !FSL_HELO_BARE_IP_1 && !__VIA_ML && !__HAS_ERRORS_TO
 
 header  FSL_HELO_NON_FQDN_1     X-Spam-Relays-External =~ /^[^\]]+ helo=[a-zA-Z0-9-_]+ /i
+describe FSL_HELO_NON_FQDN_1    Sending server said HELO without a fully qualified domain name
 # score   FSL_HELO_NON_FQDN_1     0.001
 
 # header  FSL_HELO_NON_FQDN_2     X-Spam-Relays-External =~ /\bhelo=[a-zA-Z0-9-_]+\b/i
 # score   FSL_HELO_NON_FQDN_2     0.001
 
 header  FSL_FAKE_HOTMAIL_RVCD   X-Spam-Relays-External =~ /mx[1234]\.hotmail\.com/
+describe FSL_FAKE_HOTMAIL_RVCD  Forged hotmail server domain (Microsoft uses other domains for outbound mail)
 # score   FSL_FAKE_HOTMAIL_RCVD   0.001
 
 # header  FSL_FAKE_YAHOO_RCVD     X-Spam-Relays-External =~ /mx\.mail\.yahoo.com/
@@ -142,15 +148,18 @@ header  FSL_FAKE_HOTMAIL_RVCD   X-Spam-Relays-External =~ /mx[1234]\.hotmail\.co
 # score   FSL_HELO_HOME           0.001
 
 header  FSL_HELO_SETUP          X-Spam-Relays-External =~ /\bhelo=\S+\.setup\b/i
+describe FSL_HELO_SETUP         Sending server said HELO with `.setup`
 # score   FSL_HELO_SETUP          0.001
 
 header  FSL_HELO_FIREWALL       X-Spam-Relays-External =~ /\bhelo=\S+\.firewall\b/i
 # score FSL_HELO_FIREWALL       0.001
 
 header  FSL_HELO_DEVICE         X-Spam-Relays-External =~ /\bhelo=(?:(?:dsl)?device|speedtouch)\.lan\b/i
+describe FSL_HELO_DEVICE        Sending server claimed to be `device/speedtouch.lan`
 # score FSL_HELO_DEVICE         0.001
 
 header  FSL_HELO_FAKE           X-Spam-Relays-External =~ /\bhelo=(?:yandex.ru|(?:hotmail|gmail|google|yahoo|msn|microsoft)\.com)\b/i
+describe FSL_HELO_FAKE          Sending server incorrectly claimed to be major free public email vendor
 # score FSL_HELO_FAKE           0.001
 
 # Testing

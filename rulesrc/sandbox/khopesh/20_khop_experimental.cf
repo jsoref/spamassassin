@@ -132,6 +132,7 @@ score	 KHOP_HELO_FCRDNS	0.4 # 20090603
 
 # inspired by SPF HELO portion of http://www.chaosreigns.com/mtx/#comparisons
 meta	 FORGED_SPF_HELO	__HELO_NOT_RDNS && SPF_HELO_PASS && !SPF_PASS
+describe FORGED_SPF_HELO SPF doesn't permit sending for this sender; HELO doesn't match reverse dns, but HELO is permitted by SPF
 # nice theory, expecting poor practice, maybe 0.0453/0.1227 s/h @ 0.270 s/o
 
 # This *really* needs properly defined trusted networks.

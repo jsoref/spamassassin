@@ -101,6 +101,7 @@ tflags    NICE_REPLY_C		nice
 #counts   NICE_REPLY_C             3s/544h of 43776 corpus (34010s/9766h FVGT) 11/29/06
 
 meta     FAKE_REPLY_C		(__SUBJ_RE && __MISSING_REF && __NO_INR_YES_REF)
+describe FAKE_REPLY_C       Message pretends to be a reply but headers do not reference another message
 ## score    FAKE_REPLY_C		1.666
 #counts   FAKE_REPLY_C             7896s/6h of 43776 corpus (34010s/9766h FVGT) 11/29/06
 

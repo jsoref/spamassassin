@@ -40,7 +40,9 @@ meta TVD_PH_FR5 !__ENV_AND_HDR_FROM_MATCH && __PH_TVD_FROM2
 header __FROM_PAYPAL	From:addr =~ /\@paypal\.com$/i
 header __FROM_EBAY	From:addr =~ /\@ebay\.com$/i
 meta TVD_PP_PHISH	__FROM_PAYPAL && NORMAL_HTTP_TO_IP
+describe TVD_PP_PHISH PayPal phishing link to ip address
 meta TVD_EB_PHISH	__FROM_EBAY && NORMAL_HTTP_TO_IP
+describe TVD_EB_PHISH ebay phishing link to ip address
 
 # 0.209   0.2612   0.0033    0.987   0.69    1.00  TVD_SUBJ_ACC_NUM
 header	TVD_SUBJ_ACC_NUM	Subject =~ /\b[a-zA-Z]+ [\#\s]{1,4}\d+[A-Z]+/
@@ -79,6 +81,7 @@ ifplugin Mail::SpamAssassin::Plugin::HTTPSMismatch
 
 # used to be T_HTTPS_HTTP_MISMATCH_1_10, has the best results
 body  HTTPS_HTTP_MISMATCH eval:check_https_http_mismatch('1','10')
+describe  HTTPS_HTTP_MISMATCH Link text and location don't match
 
 endif
 

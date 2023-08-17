@@ -64,7 +64,9 @@ reuse RCVD_IN_MSPIKE_H2
 meta __RCVD_IN_MSPIKE_LOW	RCVD_IN_MSPIKE_L5 || RCVD_IN_MSPIKE_L4 || RCVD_IN_MSPIKE_L3
 tflags __RCVD_IN_MSPIKE_LOW	net
 
+# https://svn.apache.org/viewvc?view=revision&revision=1037373
 meta RCVD_IN_MSPIKE_ZBI		__RCVD_IN_MSPIKE_Z && !__RCVD_IN_MSPIKE_LOW
+describe RCVD_IN_MSPIKE_ZBI Spam wave (2010) participant
 tflags RCVD_IN_MSPIKE_ZBI	net
 
 ## Meta rules for aggregating good and bad senders

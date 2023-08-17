@@ -42,6 +42,7 @@ describe HTML_SHORT_CENTER	HTML is very short with CENTER tag
 
 
 meta HTML_TITLE_SUBJ_DIFF	__HTML_TITLE_SUBJ_DIFF && !__MIME_ATTACHMENT
+describe HTML_TITLE_SUBJ_DIFF HTML title differs from message Subject
 
 meta HTML_CHARSET_FARAWAY	(__HTML_CHARSET_FARAWAY && __HIGHBITS)
 describe HTML_CHARSET_FARAWAY	A foreign language charset used in HTML markup

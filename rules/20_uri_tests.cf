@@ -29,6 +29,7 @@ require_version @@VERSION@@
 # not expecting any hits on this (yet)
 uri HIGH_CODEPAGE_URI	       /^https?:\/\/[^\/]*\&\#(?:\d{4,}|[3456789]\d\d);/i
 tflags HIGH_CODEPAGE_URI       userconf
+describe HIGH_CODEPAGE_URI     Appears to be an IDN spoofing attack -- if you see this, please report
 
 ###########################################################################
 

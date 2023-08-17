@@ -1,7 +1,9 @@
 
+# https://svn.apache.org/viewvc/spamassassin/rules/trunk/sandbox/kb/70_misc.cf?revision=668021&view=markup&pathrev=668021
+# https://forum.howtoforge.com/threads/how-to-protect-my-ispconfig-server-from-the-spam-attack.28013/
 # Shot in the dark, spotted by coincidence.  Seeing more of these soon?
-
 header  THEBAT_UNREG  X-Mailer =~ /^The Bat! .{0,20} UNREG$/
+describe THEBAT_UNREG The Bat! mailer used without registering as spotted sending spam in 2008
 
 
 # Bunch of rules to detect Opera MUA fakes.  These seem to just have started.
@@ -40,6 +42,7 @@ meta     PQRTW_4         __PQRTW_4_A || __PQRTW_4_SPAN
 # livefilestore.com  Domain Status: Registered And No Website
 
 uri  LIVEFILESTORE       m~livefilestore.com/~
+describe LIVEFILESTORE   Old microsoft file sharing domain
 uri  LIVEFILESTORE_HTML  m~livefilestore.com/[^/]{0,100}/[^/]{0,20}\.html?$~
 
 
@@ -72,15 +75,19 @@ uri  LIVEFILESTORE_HTML  m~livefilestore.com/[^/]{0,100}/[^/]{0,20}\.html?$~
 # Some variants with varying fuzzyness, to investigate accuracy.
 
 header  KB_RATWARE_OUTLOOK_16  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$([0-9a-f]{8})\$.{100,400}boundary="----=_NextPart_000_...._\1\.\2/msi  # "
+describe KB_RATWARE_OUTLOOK_16 Bulk email software appears to be impersonating Outlook
 
 header  KB_RATWARE_OUTLOOK_12  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$([0-9a-f]{4})[0-9a-f]{4}\$.{100,400}boundary="----=_NextPart_000_...._\1\.\2/msi  # "
+describe KB_RATWARE_OUTLOOK_12 Bulk email software appears to be impersonating Outlook
 
 header  KB_RATWARE_OUTLOOK_08  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$[0-9a-f]{8}\$.{100,400}boundary="----=_NextPart_000_...._\1\./msi  # "
+describe KB_RATWARE_OUTLOOK_08 Bulk email software appears to be impersonating Outlook
 
 
 # Slightly stricter Message-Id variant.  Testing.
 
 header  KB_RATWARE_OUTLOOK_MID  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$([0-9a-f]{8})\$[0-9a-f]{8}\@.{100,400}boundary="----=_NextPart_000_...._\1\.\2"/msi
+describe KB_RATWARE_OUTLOOK_MID Bulk email software appears to be impersonating Outlook -- If it really is outlook, please file a bug
 
 
 # header  __IS_MIME_MSG       exists:MIME-Version
@@ -97,6 +104,7 @@ header __RATWARE_BOUND_A  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$[0-9a-f]{8}\$
 header __RATWARE_BOUND_B  ALL =~ /boundary="----=_NextPart_000_...._([0-9a-f]{8})\..{10,400}^Message-Id: <....\1\$[0-9a-f]{8}\$/msi # "
 
 meta   KB_RATWARE_BOUNDARY   __RATWARE_BOUND_A || __RATWARE_BOUND_B
+describe KB_RATWARE_BOUNDARY Bulk email software identified by message boundaries
 
 
 # Explain later. ;)
