@@ -131,17 +131,21 @@ endif
 full   DKIM_VERIFIED		eval:check_dkim_valid()
 tflags DKIM_VERIFIED		net nice
 reuse  DKIM_VERIFIED
+describe DKIM_VERIFIED  (COMPAT) Message has at least one valid DKIM or DK signature
 
 header DKIM_POLICY_TESTING	eval:check_dkim_testing()
 tflags DKIM_POLICY_TESTING	net nice
 reuse  DKIM_POLICY_TESTING
+describe  DKIM_POLICY_TESTING  (COMPAT) Message has at least one valid DKIM or DK signature which has a testing flag
 
 header DKIM_POLICY_SIGNSOME	eval:check_dkim_signsome()
 tflags DKIM_POLICY_SIGNSOME	net nice
 reuse  DKIM_POLICY_SIGNSOME
+describe DKIM_POLICY_SIGNSOME (COMPAT) This should never happen, check your configuration
 
 header DKIM_POLICY_SIGNALL	eval:check_dkim_signall()
 tflags DKIM_POLICY_SIGNALL	net nice
 reuse  DKIM_POLICY_SIGNALL
+describe DKIM_POLICY_SIGNALL (COMPAT) Domain signs all mail, no valid author domain signature
 
 endif   # Mail::SpamAssassin::Plugin::DKIM
