@@ -36,7 +36,7 @@ meta     FAKE_REPLY_A1		(__SUBJ_RE && __MISSING_REPLY && __MISSING_REF && __BOTH
 
 
 
-#In-Reply-To but but no References
+#In-Reply-To but no References
 header   __XM_IMAIL		X-Mailer =~ /^<IMail v\d/
 header   __XM_APPLEMAIL		X-Mailer =~ /^Apple Mail/
 header   __XM_COMMUNIG		X-Mailer =~ /^CommuniGate/
