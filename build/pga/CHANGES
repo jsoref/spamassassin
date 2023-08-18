@@ -53,7 +53,7 @@ Changes in Version 1.0
             -arch rs6000.
 
         10)  The configure script now accepts the -cflags and -flags switchs to
-            supply supply options to the C and FORTRAN compiler, respectively.
+            supply options to the C and FORTRAN compiler, respectively.
 
 	11)  Changed PGATRUE and PGAFALSE to PGA_TRUE and PGA_FALSE.
 
