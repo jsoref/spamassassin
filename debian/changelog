@@ -957,7 +957,7 @@ spamassassin (2.20-1) unstable; urgency=medium
   * New upstream release. (Closess: #140300, #140910, #143324, #134669,
     #136329, #140422, #140910)
   * This fixes the "razor 1.20-1 bug" (143324)
-  * New features. Yay! (including the -S (short-ciruit) flag for spamd)
+  * New features. Yay! (including the -S (short-circuit) flag for spamd)
   * Urgency=medium to beat razor 1.20-1 to woody.
 
  -- Duncan Findlay <duncf@rogers.com>  Sat, 20 Apr 2002 00:05:40 -0400
