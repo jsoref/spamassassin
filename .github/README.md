@@ -5,7 +5,7 @@ The [Apache SpamAssassin project](https://spamassassin.apache.org/ "Apache SpamA
 
 The .github directory containing this README file is not part of the Apache SpamAssassin release package. The files in this directory are intended for use by developers to run tests using GitHub's Actions facility on GitHub hosted runners.
 
-The Apache SpamAssassin Project Management Committe has not made any arrangements to use the resources allocated to the Apache Software Foundation by GitHub to run builds and tests. The actions defined in this directory are available for anyone, including active developers of SpamAssassin, to run in their personal GitHub fork of the repo. However, the inclusion of the files in this repository does not comprise a formal release of the software to the public.
+The Apache SpamAssassin Project Management Committee has not made any arrangements to use the resources allocated to the Apache Software Foundation by GitHub to run builds and tests. The actions defined in this directory are available for anyone, including active developers of SpamAssassin, to run in their personal GitHub fork of the repo. However, the inclusion of the files in this repository does not comprise a formal release of the software to the public.
 
 #### How to use
 
