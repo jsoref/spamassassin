@@ -32,7 +32,7 @@ progress.
 
 More Detailed view:
 
-The benchmark consistes of several phases, normally between each phase
+The benchmark consists of several phases, normally between each phase
 there will be a sa-learn --dump magic, a database size check (if
 available) and an sa-learn --backup:
 
