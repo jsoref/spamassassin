@@ -256,7 +256,7 @@ sub lint_rule_text {
     my %opts = @_;
 
     return if ($opts{msg} =~ /
-          (?:score\sset\sfor\snon-existent|description\sexists)
+          (?:score\sset\sfor\snonexistent|description\sexists)
       /x);
 
     warn "lint: $opts{msg}";

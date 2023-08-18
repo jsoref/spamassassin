@@ -661,14 +661,14 @@ sub lint_check {
     # Check for description and score issues in lint fashion
     while ( my $k = each %{$conf->{descriptions}} ) {
       if (!exists $conf->{tests}->{$k}) {
-        dbg("config: description exists for non-existent rule $k");
+        dbg("config: description exists for nonexistent rule $k");
       }
     }
 
     while ( my($sk) = each %{$conf->{scores}} ) {
       if (!exists $conf->{tests}->{$sk}) {
         # bug 5514: not a lint warning any more
-        dbg("config: score set for non-existent rule $sk");
+        dbg("config: score set for nonexistent rule $sk");
       }
     }
   }
