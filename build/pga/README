@@ -69,7 +69,7 @@ implementation of MPI.  MPICH runs on many parallel computers and
 workstation networks and is publicly available and free.  The complete
 distribution is available by anonymous ftp from ftp.mcs.anl.gov.  Take the
 file mpich.tar.Z from the directory pub/mpi.  Additional information about
-MPICH is avaliable on the World Wide Web at http://www.mcs.anl.gov/mpi.
+MPICH is available on the World Wide Web at http://www.mcs.anl.gov/mpi.
 
 Installation Instructions
 =========================
