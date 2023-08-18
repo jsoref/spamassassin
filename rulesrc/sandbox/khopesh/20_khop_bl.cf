@@ -51,7 +51,7 @@
 #tflags  __RCVD_VIA_LACNIC_E    nopublish
 #
 ## American Registry of Internet Numbers (ARIN)
-## (Canada, many Carribbean and North Atlantic islands, the United States)
+## (Canada, many Caribbean and North Atlantic islands, the United States)
 ## from https://www.arin.net/knowledge/ip_blocks.html at 20100524
 ## ... that page is out of date.  Using IANA page instead:
 ## https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.txt
