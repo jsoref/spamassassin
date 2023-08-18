@@ -111,7 +111,7 @@ Database Schema
 
 The database schema for storage of the bayesian filter data contains
 several different tables.  Several sample SQL schemas have been
-included in to help in setting up your database.  The schemas contain
+included to help in setting up your database.  The schemas contain
 the minimum tables and columns necessary to work with the code as
 written.  You are free to add other columns as needed for your local
 implementation.  Presently there is no way to override the table and
