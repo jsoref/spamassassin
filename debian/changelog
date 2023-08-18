@@ -1066,7 +1066,7 @@ spamassassin (1.5-2) unstable; urgency=low
 
   * Added Build-Depends for ia64 (bind-dev)  (Closes some bug yet to be
     filed)
-  * Clarfied README.Debian (Closes: #123194, #123240)
+  * Clarified README.Debian (Closes: #123194, #123240)
   * Fixed word_in_dictionary bug
   * Added warning to spamd users using an old version of dpkg
     (Closes: #123320)
