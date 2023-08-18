@@ -145,7 +145,7 @@ via 20_aux_tlds.cf delivered via sa-update.
 The $VALID_TLDS_RE global in registrar boundaries is deprecated but kept
 for third-party plugin compatibility.  It may be removed in a future
 release. See Mail::SpamAssassin::Plugin::FreeMail for an example of the
-new way of abtaining a valid list of TLDs.
+new way of obtaining a valid list of TLDs.
 
 The following functions and variables will be removed in the next
 release after 3.4.1 excepting any emergency break/fix releases
