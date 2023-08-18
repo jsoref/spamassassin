@@ -280,7 +280,7 @@ sub am_running_on_windows {
 ###########################################################################
 
 # untaint a path to a file, e.g. "/home/jm/.spamassassin/foo",
-# "C:\Program Files\SpamAssassin\tmp\foo", "/home/õüt/etc".
+# "C:\Program Files\SpamAssassin\tmp\foo", "/home/ï¿½ï¿½t/etc".
 #
 # TODO: this does *not* handle locales well.  We cannot use "use locale"
 # and \w, since that will not detaint the data.  So instead just allow the
@@ -2360,7 +2360,7 @@ sub get_my_locales {
 
 ###########################################################################
 
-# bug 5612: work around for bugs in Berkeley db 4.2
+# bug 5612: workaround for bugs in Berkeley db 4.2
 #
 # on 4.2 having the __db.[DBNAME] file will cause an loop that will never finish
 # on 4.3+ the loop will timeout after 301 open attempts, but we will still
