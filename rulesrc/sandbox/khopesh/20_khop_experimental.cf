@@ -90,7 +90,7 @@ header __RDNS_SHORT	X-Spam-Relays-External =~ /^[^\]]+ rdns=\S{4,14} /
 
 # Rough nonplugin regexs from John Rudd's Botnet plugin (v0.8, 2007-08-05).
 # http://people.ucsc.edu/~jrudd/spamassassin/Botnet-0.8.tar
-# I've purposefully removed anything alrady in RDNS_DYNAMIC
+# I've purposefully removed anything already in RDNS_DYNAMIC
 # NOTE: this is GPLv2, which is incompatible with the Apache License.
 # My *brief* read is that Apache->GPLv2 is taboo but GPLv2->Apache is fine.
 # I wrote the next four rules from his base words, so these are fine.
