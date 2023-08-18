@@ -149,7 +149,7 @@ IPv6
 ----
 
 Some users have reported difficulty running spamd with an IPv6
-listening address. As a work around, please ensure you have
+listening address. As a workaround, please ensure you have
 libio-socket-inet6-perl installed.
 
  -- Duncan Findlay <duncf@debian.org>, Mon, 21 May 2007 23:53:57 -0400
