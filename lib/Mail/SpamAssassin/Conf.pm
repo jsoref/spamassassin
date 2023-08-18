@@ -4083,7 +4083,7 @@ This option gives the password used by the above DSN.
 
 Whether to call the services_authorized_for_username plugin hook in BayesSQL.
 If the hook does not determine that the user is allowed to use bayes or is
-invalid then then database will not be initialized.
+invalid then the database will not be initialized.
 
 NOTE: By default the user is considered invalid until a plugin returns
 a true value.  If you enable this, but do not have a proper plugin
