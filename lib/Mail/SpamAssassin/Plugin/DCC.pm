@@ -20,7 +20,7 @@
 #   deal with orphan dccifd sockets
 #   use `cdcc -q` to not stall waiting to find a DCC server when deciding
 #     whether DCC checks are enabled
-#   use dccproc -Q or dccifd query if a pre-existing X-DCC header shows
+#   use dccproc -Q or dccifd query if a preexisting X-DCC header shows
 #     the message has already been reported
 #   dccproc now uses -w /var/dcc/whiteclnt so it acts more like dccifd
 #   warn about the use of ancient versions of dccproc and dccifd
