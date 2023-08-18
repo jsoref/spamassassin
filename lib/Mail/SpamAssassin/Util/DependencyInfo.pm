@@ -496,7 +496,7 @@ sub try_binary {
         $version_meets_recommended = test_version($binary_version, $recommended_version);
       }
     }
-    #print "DEBUG: $command completd and output parsed\n";
+    #print "DEBUG: $command completed and output parsed\n";
   }
 
   unless (defined $errtype) {
