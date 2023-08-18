@@ -2641,7 +2641,7 @@ sub _valid_parsed_address {
 
 #
 # v0.1, improved internal parser, no support for comments in strange
-# places or nested comments, but handled a large corpus atleast 99% the
+# places or nested comments, but handled a large corpus at least 99% the
 # same as Email::Address::XS and in some cases even better (retains some
 # more name/addr info, even when not fully valid).
 #
