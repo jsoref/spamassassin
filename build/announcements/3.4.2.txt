@@ -13,7 +13,7 @@ release.
 
 As with any release there are a number of functional patches, improvements as
 well as security reasons to upgrade to 3.4.2.  In this case we have over 3 
-years of issues being resolved at once.  And we are laying thr groundwork for
+years of issues being resolved at once.  And we are laying the groundwork for
 version 4.0 which is is designed to more natively handle UTF-8.
 
 However, there is one specific pressing reason to upgrade.  Specifically, we 

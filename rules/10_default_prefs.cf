@@ -23,7 +23,7 @@
 #
 ###########################################################################
 
-# Default template. Try to keep it under 78 columns (inside the the dots below).
+# Default template. Try to keep it under 78 columns (inside the dots below).
 #      ........................................................................
 clear_report_template
 if can(Mail::SpamAssassin::Conf::feature_yesno_takes_args)
