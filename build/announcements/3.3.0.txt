@@ -278,7 +278,7 @@ IPv6 SUPPORT
 
 SPAMC
 
-- Mail::SpamAssasin::Client ping may erroneously result in broken pipe;
+- Mail::SpamAssassin::Client ping may erroneously result in broken pipe;
   bump spamc protocol version to 1.5, updated spamd, spamc and Client.pm;
 
 - added -n / --connect-timeout switch to spamc, allowing to separate

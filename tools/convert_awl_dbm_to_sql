@@ -18,7 +18,7 @@ my ( %h $k $v );
 sub usage {
   print "This program takes the following required arguments:\n";
   print "--username <username> - This is who's welcomelist you are loading.\n";
-  print "                        It should match exactly what spassassin or\n";
+  print "                        It should match exactly what spamassassin or\n";
   print "                        spamd will be using.\n";
   print "--dsn <dsn> - This is the database DSN.  It should be in the form:\n";
   print "              DBI:driver:database:hostname[:port]\n";

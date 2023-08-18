@@ -218,7 +218,7 @@ sub bgsend_and_start_lookup {
     my($package, $filename, $line) = caller;
     warn "async: bgsend_and_start_lookup called without rulename, ".
          "from $package ($filename) line $line. You are likely using ".
-         "a plugin that is not compatible with SpamAssasin 4.0.0.";
+         "a plugin that is not compatible with SpamAssassin 4.0.0.";
   }
 
   $domain =~ s/\.+\z//s;  # strip trailing dots, these sometimes still sneak in
@@ -399,7 +399,7 @@ sub start_lookup {
     my($package, $filename, $line) = caller;
     warn "async: deprecated start_lookup called, ".
          "from $package ($filename) line $line. You are likely using ".
-         "a plugin that is not compatible with SpamAssasin 4.0.0.";
+         "a plugin that is not compatible with SpamAssassin 4.0.0.";
   }
 
   return if $self->{main}->{resolver}->{no_resolver};
