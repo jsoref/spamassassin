@@ -24,7 +24,7 @@ use re 'taint';
 
 my @ORIG_INC_OPTS;
 BEGIN {
-  # bug 8030 - Save what is in @INC to capture any -I arguments passed in to use at SIGHUP restart
+  # bug 8030 - Save what is in @INC to capture any passed in -I arguments to use at SIGHUP restart
   # This is done before any use lib statements add anything else to @INC
   my %orig_inc;
   for (my $i = $#INC; $i >=0; $i--) {
