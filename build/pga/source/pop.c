@@ -192,7 +192,7 @@ int PGAGetPopSize (PGAContext *ctx)
       ctx - context variable
 
    Outputs:
-      The maximum number number of strings to replace each generation
+      The maximum number of strings to replace each generation
 
    Example:
       PGAContext *ctx;
