@@ -34,7 +34,7 @@ Key features are:
 Availability
 ============
 PGAPack is freely available.  The complete distribution is available
-by anonymous ftp from from ftp.mcs.anl.gov in the file 
+by anonymous ftp from ftp.mcs.anl.gov in the file 
 pub/pgapack/pgapack.tar.Z.  The distribution contains all source code,
 installation instructions, users guide, and a collection of examples in C and
 Fortran. 
