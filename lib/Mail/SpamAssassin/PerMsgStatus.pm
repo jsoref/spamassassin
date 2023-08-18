@@ -747,7 +747,7 @@ sub _get_autolearn_points {
 
   my $conf = $self->{conf};
 
-  # This function needs to use use sum($score[scoreset % 2]) not just {score}.
+  # This function needs to use sum($score[scoreset % 2]) not just {score}.
   # otherwise we shift what we autolearn on and it gets really weird.  - tvd
   my $orig_scoreset = $conf->get_score_set();
   my $new_scoreset = $orig_scoreset;
