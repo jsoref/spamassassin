@@ -3111,7 +3111,7 @@ if can(Mail::SpamAssassin::Conf::feature_bug6558_free)
   score      ZW_OBFU_BITCOIN            2.500	# limit
 
   meta       ZW_OBFU_FROMTOSUBJ         __UNICODE_OBFU_ZW && FROM_IN_TO_AND_SUBJ 
-  describe   ZW_OBFU_FROMTOSUBJ         Obfuscated text + from in to and subject
+  describe   ZW_OBFU_FROMTOSUBJ         Obfuscated text + From in To and Subject
   score      ZW_OBFU_FROMTOSUBJ         2.000	# limit
 
   meta       ZW_OBFU_FREEM              __UNICODE_OBFU_ZW && __freemail_hdr_replyto 
