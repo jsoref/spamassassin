@@ -1904,7 +1904,7 @@ appear in configuration files multiple times, the last setting prevails.
 Option I<v4> declares resolver capable of returning IPv4 (A) records. 
 Option I<v6> declares resolver capable of returning IPv6 (AAAA) records. 
 One would set I<nov6> if the resolver is filtering AAAA responses.  NOTE:
-these options only refer to I<resolving capabilies>, there is no other
+these options only refer to I<resolving capabilities>, there is no other
 meaning like whether the IP address of resolver itself is IPv4 or IPv6.
 
 Option I<edns> (or I<edns0>) may take a value which specifies a requestor's
