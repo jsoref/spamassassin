@@ -18,7 +18,7 @@ Notes on building SpamAssassin on VMS
   - The generated Makefile.PL no longer relies on UNIX input/output
     redirection; /bin/sh "for" loops; @foo "silent" directives; backslashed
     continuations; or [ -f foo ] || somecommand conditionals.  At least, not in
-    our code any more ;)
+    our code anymore ;)
 
   - There are still some UNIX paths inside the generated Makefile:
     "rules/local.cf" for example.  Suggestions on how to work around this

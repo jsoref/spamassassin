@@ -1513,7 +1513,7 @@ sub spawn {
       if ($copy_config_p) {
         # use a timeout!  There are bugs in Storable on certain platforms
         # that can cause spamd to hang -- see bug 3828 comment 154.
-        # we don't use Storable any more, but leave this in -- just
+        # we don't use Storable anymore, but leave this in -- just
         # in case.
 	# bug 4699: this is the alarm that often ends up with an empty $@
 

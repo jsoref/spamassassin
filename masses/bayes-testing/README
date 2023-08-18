@@ -112,7 +112,7 @@ The important items are:
 - thresholds_all: a version of the thresholds output that is optimized for
   lowest "cost" figure, basically searched the entire score distribution for
   optimal thresholds.   Nowadays we have chosen some static thresholds and they
-  work OK, so this isn't much use any more.
+  work OK, so this isn't much use anymore.
 
 - The "bucket*" dirs, and "nonspam_all.log" or "spam_all.log" can be discounted
   unless you need to look into more details of why a run didn't work the way
