@@ -210,7 +210,7 @@ ENABLE_SSL:
 CONTACT_ADDRESS:
   Each reported spam contains an address under which the confused user/client
   can request more information about the tagging of his mail. That address can
-  be set here. The default is to query the buildung user, falling back to the
+  be set here. The default is to query the building user, falling back to the
   string "the administrator of that system".
 
   Sample:
