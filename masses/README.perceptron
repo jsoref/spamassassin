@@ -82,7 +82,7 @@ linear transfer function:
 
 [1]	f(x) = bias + sum_{i=1}^{n} w_i * x_i
 
-This is quite similar to how the SpamAssasin score system works.  If you 
+This is quite similar to how the SpamAssassin score system works.  If you 
 set the bias to be 0, w_i to be the score for rule i and x_i to be whether 
 or not rule i is activated by a given message, the transfer function will 
 return the score of the message.  
