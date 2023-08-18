@@ -161,7 +161,7 @@ PGAContext *PGACreate ( int *argc, char **argv,
                   PGA_FATAL, PGA_INT, (void *) &datatype );
     };
 
-    /* required parameter 2: string string length */
+    /* required parameter 2: string length */
     if (len <= 1)
         PGAError( ctx,  "PGACreate: Invalid value of len:",
                   PGA_FATAL, PGA_INT, (void *) &len );
