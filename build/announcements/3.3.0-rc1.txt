@@ -83,7 +83,7 @@ COMPATIBILITY WITH 3.2.5
   to DKIM_VALID, to match its semantics;
 
 - due to a change in internal data structure (Bug 6185, 6254), third-party
-  plugins which accesss the $pms->{main}->{conf}->{headers_spam} (and ham)
+  plugins which access the $pms->{main}->{conf}->{headers_spam} (and ham)
   need to be updated. One such example is the ClamAVPlugin plugin - please
   find a fresh version on its wiki page. It retains backwards compatibility,
   so can be used with both 3.2.5 as well as with SpamAssassin 3.3.0;
