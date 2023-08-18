@@ -235,7 +235,7 @@ disable_auto_update_publishing_and_get_new_update_revision_number() {
 
 svn_path_exists() {
   SVNINFO=`svn info $1 2>&1 || true`
-  # W170000 == non-existent revision
+  # W170000 == nonexistent revision
   if [[ $SVNINFO =~ W170000: ]]; then return 1; fi
   # Hardfail on any other error
   if [[ ! $SVNINFO =~ Revision: ]]; then
