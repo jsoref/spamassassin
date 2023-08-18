@@ -16,7 +16,7 @@ installation being visible to and interfering with the build or test processes.
 Also some of the tests have the potential of interfering with running processes associated
 with the system-installed SpamAssassin.
 
-The safest course of action for an official release buld is to use a (virtual) machine
+The safest course of action for an official release build is to use a (virtual) machine
 made specifically for the purpose. Detailed instructions for installing a build environment
 can be found on the Apache SpamAssassin wiki at https://cwiki.apache.org/confluence/x/lRKhD
 
