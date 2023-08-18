@@ -1617,7 +1617,7 @@ sub run_through_messages {
     # start children processes
     start_children($opt_j, \@child, \@pid, $select);
 
-    # feed childen, make them work for it, repeat
+    # feed children, make them work for it, repeat
     while ($select->count()) {
       foreach my $socket ($select->can_read()) {
         my $line = read_line($socket);
