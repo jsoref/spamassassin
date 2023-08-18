@@ -105,7 +105,7 @@ reuse           URIBL_DBL_MALWARE
 
 urirhssub       URIBL_DBL_BOTNETCC  	dbl.spamhaus.org.       A   127.0.1.6
 body            URIBL_DBL_BOTNETCC	eval:check_uridnsbl('URIBL_DBL_BOTNETCC')
-describe        URIBL_DBL_BOTNETCC	Contains a botned C&C URL listed in the Spamhaus DBL blocklist
+describe        URIBL_DBL_BOTNETCC	Contains a botnet C&C URL listed in the Spamhaus DBL blocklist
 tflags          URIBL_DBL_BOTNETCC	net domains_only notrim
 reuse           URIBL_DBL_BOTNETCC
 
