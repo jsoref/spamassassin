@@ -751,7 +751,7 @@ void PGARealPrintString (PGAContext *ctx, FILE *fp, int p, int pop)
 
 
 /*I****************************************************************************
-   PGARealCopyString - Copy one real-valued string string to another
+   PGARealCopyString - Copy one real-valued string to another
 
    Inputs:
       ctx - context variable
