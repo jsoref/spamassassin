@@ -241,7 +241,7 @@ sub uri_to_domain {
   my $self = shift;
   my $uri = lc shift;
 
-  # Javascript is not going to help us, so return.
+  # JavaScript is not going to help us, so return.
   # Likewise ignore cid, file
   return if ($uri =~ /^(?:javascript|cid|file):/);
 
