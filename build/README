@@ -411,7 +411,7 @@ Run "svn status" to ensure you're building/releasing from a pristine
 - DNS Steps TBD - Talk to sysadmins@spamassassin.apache.org
 
 #- [X.Y.0 RELEASES ONLY]: NOTE: This may change, make sure this info is
-#  still accurate before changing this (preferrably find out BEFORE doing
+#  still accurate before changing this (preferably find out BEFORE doing
 #  an X.Y.0 release.  Update the mkupdates stuff:
 
 #  - Create an empty file for the new version number in
