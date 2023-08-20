@@ -546,7 +546,7 @@ void PGACharacterCopyString (PGAContext *ctx, int p1, int pop1, int p2,
 }
 
 /*I****************************************************************************
-   PGACharacterDuplicate - Returns true if string p1 in pop1 is a dublicate
+   PGACharacterDuplicate - Returns true if string p1 in pop1 is a duplicate
    of string p2 in pop2, else returns false.
    Assumes the strings are the same length.
 
