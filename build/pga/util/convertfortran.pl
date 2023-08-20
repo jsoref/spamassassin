@@ -2,7 +2,7 @@
 #
 #  Convert fortran examples to 64-bit compatable codes.
 #
-#  This script will replace all occurances of "integer ctx" and 
+#  This script will replace all occurrences of "integer ctx" and 
 #  "integer comm" with "integer*8 ctx" and "integer*8 comm", respectively.
 #  (Uncomment the commented lines below to convert back to 32-bit examples.)
 #
