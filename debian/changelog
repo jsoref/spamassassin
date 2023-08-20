@@ -439,7 +439,7 @@ spamassassin (3.0.2-1) unstable; urgency=low
 
   * New upstream release (Closes: #284663, #286595)
     - Number of URLs now limited for URIDNSBL plugin (Closes: #279180)
-    - Handles obscure exim Recieved: header format (Closes: #279504)
+    - Handles obscure exim Received: header format (Closes: #279504)
   * Updated logcheck messages (Closes: #281560)
   * Updated README.Debian to explain a bit more about configuring
     spamd as non-root and for sitewide bayes. (Closes: #271870, #273187)
