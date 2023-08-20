@@ -70,7 +70,7 @@ edit /etc/default/spamassassin.
 
 If you intend to use Bayes sitewide, it is recommended that you set up
 an SQL-based Bayes storage module. (You may also want to store scores
-and other prefences in SQL too.) Please read the documentation in
+and other preferences in SQL too.) Please read the documentation in
 /usr/share/doc/spamassassin/sql/ for more information.
 
 Please note that SQL storage is not very private -- anyone that has
