@@ -8,7 +8,7 @@
 # These tests include the spamd stress test which will attempt to kill running spamd processes
 # so this script should not be run on a production server that is running spamd.
 # Note that some tests require certain Perl modules to be installed or else they are skipped.
-# Install all optional modules on a release build/test machine so all feasable tests are run.
+# Install all optional modules on a release build/test machine so all feasible tests are run.
 # The root* tests will be skipped because this script will not run as root
 # Use sudo make test TEST_FILES="t/root*.t" to run just those tests separately
 
