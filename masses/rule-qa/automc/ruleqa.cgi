@@ -620,10 +620,10 @@ sub show_default_view {
 
     };
 
-    my @parms = $self->get_params_except(qw(
+    my @params = $self->get_params_except(qw(
             rule s_age s_overlap s_all s_detail
           ));
-    my $url_back = $self->assemble_url(@parms);
+    my $url_back = $self->assemble_url(@params);
 
     print qq{
 
@@ -1504,7 +1504,7 @@ sub create_detail_url {
   my ($self, $rulename) = @_;
 
   if (!$self->{create_detail_url_template}) {
-    my @parms = (
+    my @params = (
           $self->get_params_except(qw(
            rule s_age s_overlap s_all s_detail daterev
          )),
@@ -1512,7 +1512,7 @@ sub create_detail_url {
          "s_detail=1",
          "rule=__create_detail_url_template__",
        );
-    $self->{create_detail_url_template} = $self->assemble_url(@parms);
+    $self->{create_detail_url_template} = $self->assemble_url(@params);
   }
 
   my $ret = $self->{create_detail_url_template};
@@ -1545,32 +1545,32 @@ sub gen_rule_link {
 sub gen_switch_url {
   my ($self, $switch, $newval) = @_;
 
-  my @parms =  $self->get_params_except($switch);
+  my @params =  $self->get_params_except($switch);
   $newval ||= '';
   if (!defined $switch) { warn "switch '$switch'='$newval' undef value"; }
-  push (@parms,
+  push (@params,
         $switch."=".$newval,
         "daterev=".$self->{daterev}
        );
-  return $self->assemble_url(@parms);
+  return $self->assemble_url(@params);
 }
 
 sub gen_this_url {
   my ($self) = @_;
-  my @parms =  $self->get_params_except("__nonexistent__");
-  return $self->assemble_url(@parms);
+  my @params =  $self->get_params_except("__nonexistent__");
+  return $self->assemble_url(@params);
 }
 
 sub gen_toplevel_url {
   my ($self, $switch, $newval) = @_;
 
-  my @parms =  $self->get_params_except($switch, qw(
+  my @params =  $self->get_params_except($switch, qw(
               rule s_age s_overlap s_all s_detail daterev
             ));
   $newval ||= '';
   if (!defined $switch) { warn "switch '$switch'='$newval' undef value"; }
-  push (@parms, $switch."=".$newval);
-  return $self->assemble_url(@parms);
+  push (@params, $switch."=".$newval);
+  return $self->assemble_url(@params);
 }
 
 sub get_rev_for_daterev {
@@ -1588,7 +1588,7 @@ sub assemble_url {
 
   # we support special treatment for 'daterev' and 'rule'
   my %path = ();
-  my @parms = ();
+  my @params = ();
   $path{daterev} = '';
   $path{rule} = '';
   foreach my $p (@orig) {
@@ -1604,7 +1604,7 @@ sub assemble_url {
     elsif ($p =~ /^daterev=(.*)$/) { $path{daterev} = $1; }
     elsif ($p =~ /^s_detail=(?:1|on)$/) { $path{s_detail} = 1; }
     # and all the rest
-    else { push (@parms, $p); }
+    else { push (@params, $p); }
   }
 
   # ensure "/FOO" rule greps are encoded as "%2FFOO"
@@ -1614,7 +1614,7 @@ sub assemble_url {
         ($path{daterev}  ? '/'.$path{daterev} : '').
         ($path{rule}     ? '/'.$path{rule}    : '').
         ($path{s_detail} ? '/detail'          : '').
-        '?'.join('&', sort @parms);
+        '?'.join('&', sort @params);
 
   # no need for a trailing ? if there were no parms
   $url =~ s/\?$//;
@@ -1881,10 +1881,10 @@ sub gen_daterev_html_commit_td {
   my ($self, $meta) = @_;
 
   my $dr = $meta->{daterev};
-  my @parms = $self->get_params_except(qw(
+  my @params = $self->get_params_except(qw(
           daterev longdatelist shortdatelist
         ));
-  my $drhref = $self->assemble_url("daterev=".$dr, @parms);
+  my $drhref = $self->assemble_url("daterev=".$dr, @params);
 
   my $text = $self->get_daterev_code_description($dr) || '';
   $text =~ s/!drhref!/$drhref/gs;
@@ -1896,10 +1896,10 @@ sub gen_daterev_html_table_td {
   my ($self, $meta) = @_;
 
   my $dr = $meta->{daterev};
-  my @parms = $self->get_params_except(qw(
+  my @params = $self->get_params_except(qw(
           daterev longdatelist shortdatelist
         ));
-  my $drhref = $self->assemble_url("daterev=".$dr, @parms);
+  my $drhref = $self->assemble_url("daterev=".$dr, @params);
 
   my $text = $self->get_daterev_masscheck_description($dr) || '';
   $text =~ s/!drhref!/$drhref/gs;
