@@ -46,7 +46,7 @@ This plugin helps detected spam using attached PDF files
    0.6 - added support for tags - PDFCOUNT, PDFVERSION, PDFPRODUCER, etc.
        - fixed issue on perl 5.6.1 where pdf_match_details() failed to call
          _find_pdf_mime_parts(), resulting in no detection of pdf mime parts.
-       - quoted-printable support - requires MIME::QuotedPrint (which should be in everyones
+       - quoted-printable support - requires MIME::QuotedPrint (which should be in everyone's
          install as a part of the MIME-Base64 package which is a SA req)
        - added simple pdf_is_empty_body() function with counts the body bytes minus the
          subject line.  can add optional <bytes> param if you need to allow for a few bytes.
