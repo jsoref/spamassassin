@@ -3779,7 +3779,7 @@ tflags     MIXED_HREF_CASE             publish
 
 meta       __LOTSA_MIXED_CASE_TAGS     (__MIXED_FONT_CASE + __MIXED_CENTER_CASE + __MIXED_AREA_CASE + __MIXED_IMG_CASE_JH + __MIXED_HREF_CASE_JH) > 1
 
-# phishing content for now, may go primarly legit at some point
+# phishing content for now, may go primarily legit at some point
 uri        __URI_FIREBASEAPP           m,://[^./]+\.firebaseapp\.com/,
 uri        __URI_WEBAPP                m,://[^./]+\.web\.app/,
 meta       URI_FIREBASEAPP             __URI_FIREBASEAPP || __URI_WEBAPP
