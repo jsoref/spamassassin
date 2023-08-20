@@ -2242,7 +2242,7 @@ sub dotell {
   my @did_set;
   my @did_remove;
 
-  # bug 5740 Don't bayes learn if global configs disabkle bayes,
+  # bug 5740 Don't bayes learn if global configs disable bayes,
   #  also give user some control with userprefs bayes_learn_during_report option
 
   if (defined $spamtest->{bayes_scanner} && $spamtest->{conf}->{bayes_learn_during_report}) {
