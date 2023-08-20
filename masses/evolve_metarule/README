@@ -66,7 +66,7 @@ GA parameters:
 	Default: 100
 
   -g max_generations
-	How many geenrations that the simulation should run for.
+	How many generations that the simulation should run for.
 	Default: 10000
 
   -x crossover_prob
