@@ -51,7 +51,7 @@ tflags	 __SUBSCRIPTION_INFO	nice
 
 #meta	 KHOP_UNSUB_LINK	__UNSUB_LINK && !(SARE_UNI || __NOT_A_PERSON)
 meta	 KHOP_UNSUB_LINK	__UNSUB_LINK && !__NOT_A_PERSON
-describe KHOP_UNSUB_LINK	Personal message has unsusbscribe link
+describe KHOP_UNSUB_LINK	Personal message has unsubscribe link
 tflags	 KHOP_UNSUB_LINK	nopublish
 score	 KHOP_UNSUB_LINK	0.001
 
