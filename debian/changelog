@@ -454,7 +454,7 @@ spamassassin (3.0.1-1) unstable; urgency=low
   * New upstream release
     - Fix problems with broken configs with spamd (Closes: #276366)
     - Fixes some memory consuming bugs (Closes: #275232, #222783)
-    - Fixes file descriptior issue with pyzor or dccifd and amavis (Closes: #273290)
+    - Fixes file descriptor issue with pyzor or dccifd and amavis (Closes: #273290)
   * Conflict with packages broken with SpamAssassin 3.0.0 (Closes:
     #274993)
   * Create PIDFILE option in /etc/default/spamassassin so that init
