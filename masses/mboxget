@@ -47,7 +47,7 @@ mboxget - Extract message(s) from an mbox (or other mail file)
 
 B<mboxget> extracts and displays the messages specified on the command
 line and on STDIN. Messages are expected to be listed as
-<path_to_file>.<offeset> or simply <path_to_file>. Multiple messages
+<path_to_file>.<offset> or simply <path_to_file>. Multiple messages
 can be specified, in which case, each message will be output. This
 script is very useful in combination with mass-check logs and
 mboxes. Targets given on STDIN may be in B<mass-check> format, and may
