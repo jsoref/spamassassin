@@ -485,7 +485,7 @@ sub token_expiration {
 
   } else {
     dbg("bayes: Update vars to regenerate histogram");
-    # Make sure we regenerate our histogramn
+    # Make sure we regenerate our histogram
     $kept = $self->_get(vars => "NTOKENS");
     $self->{handles}->{vars}->db_put(LAST_EXPIRE => time) == 0
       or die "Couldn't put record: $BerkeleyDB::Error";
