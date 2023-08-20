@@ -568,7 +568,7 @@ void PGASetDebugLevel(PGAContext *ctx, int level)
 }
 
 /*U****************************************************************************
-   PGAClearDebugLevel - Turn off a debul level.  Only valid if PGAPack
+   PGAClearDebugLevel - Turn off a debug level.  Only valid if PGAPack
    was compiled to include debugging calls.  See the user guide for details.
 
    Category: Debugging
