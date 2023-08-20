@@ -661,7 +661,7 @@ LDFLAGS="$LDFLAGS $LIB_DIRS $LIBS"
 # This section exports the variables that have previously been set.
 # Configure creates the Makefiles listed on the last line from the
 # Makefile.in in each directory.  It does this by substituting the value
-# of $VAR for every occurent of @VAR@ in the Makefile.in.  For
+# of $VAR for every occurrence of @VAR@ in the Makefile.in.  For
 # example, if the characters @CC@ occur any place in a Makefile.in, they
 # will be replaced with the value that $CC has when ac_subst(CC) is
 # called.
