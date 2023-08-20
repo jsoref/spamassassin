@@ -967,7 +967,7 @@ spamassassin (2.11-4) unstable; urgency=medium
   * "Fixes" configuration files "problem"/"bug." I'm really not happy with
     putting upstream rules and scores in /etc/spamassassin. But I guess I
     don't have a choice. Do I? (Closes: #141484)
-  * Fixes pathes in Mail::SpamAssassin::Conf docs. (Closes: #141172)
+  * Fixes paths in Mail::SpamAssassin::Conf docs. (Closes: #141172)
   * Fixes "spelling" mistake in description. (Closes: #141512)
 
  -- Duncan Findlay <duncf@rogers.com>  Sun,  7 Apr 2002 22:02:29 -0400
