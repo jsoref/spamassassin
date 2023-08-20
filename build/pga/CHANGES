@@ -67,7 +67,7 @@ Changes in Version 1.0
 	15) Rewrote PGARandomInterval(ctx, L, U) so that it would not
 	    return L-1.  It now returns [L, U].
 
-	16) PGADone, PGAUpdateGenertaion and PGAEvaluate all take an MPI
+	16) PGADone, PGAUpdateGeneration and PGAEvaluate all take an MPI
 	    communicator as the last argument.  See PGARunGM in parallel.c
 	    for details on how to rewrite a user run routine.
 
