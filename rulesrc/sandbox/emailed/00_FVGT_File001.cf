@@ -2271,7 +2271,7 @@
 #
 #
 #rawbody  FR_DOT_FEVER_5         /(?:[a-z ']{2,35}\s[.,]\s){5}/
-#describe FR_DOT_FEVER_5         Lots of dots inbetween letters.
+#describe FR_DOT_FEVER_5         Lots of dots in between letters.
 ###score    FR_DOT_FEVER_5               3.9
 ##counts   FR_DOT_FEVER_5           0s/0h of 17415 corpus (9736s/7679h FT) 01/03/06
 ##counts   FR_DOT_FEVER_5           1s/0h of 25499 corpus (16409s/9090h FVGT) 11/04/06
