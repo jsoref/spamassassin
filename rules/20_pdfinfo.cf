@@ -108,7 +108,7 @@
 # you can do ranged dimension matches
 # body          PDF_SIZE_RANGE_2        eval:pdf_image_size_range(200, 300, 250, 350)
 
-# you can count the number of pdf mime partts
+# you can count the number of pdf mime parts
 # body          PDF_MIME_COUNT_1        eval:pdf_count(1,1)
 # body          PDF_MIME_COUNT_2_PLUS   eval:pdf_count(2)
 
