@@ -92,7 +92,7 @@ privately owned rights.
 
 /*I****************************************************************************
    PGADblHeapSort - Uses a heapsort algorithm to sort from largest to smallest
-   element.  An integer array, intialized with the original indices of the
+   element.  An integer array, initialized with the original indices of the
    elements of array a is sorted also so that the original locations are known
 
    Category: Sorting
@@ -155,7 +155,7 @@ void PGADblHeapSort ( PGAContext *ctx, double *a, int *idx, int n )
 
 /*I****************************************************************************
    PGAIntHeapSort - Uses a heapsort algorithm to sort from largest to smallest
-   element.  An integer array, intialized with the original indices of the
+   element.  An integer array, initialized with the original indices of the
    elements of array a is sorted also so that the original locations are known
 
    Category: Sorting
