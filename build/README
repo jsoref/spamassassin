@@ -6,7 +6,7 @@ It is intended to provide instructions and a checklist for the release manager.
 This document should also be useful to downstream packagers, although they would
 ignore all the details here that have to do with specifics of the Apache release process.
 The section on setting up a build and test environment might be useful to someone
-having dificulty installing SpamAssassin from source on their own machine.
+having difficulty installing SpamAssassin from source on their own machine.
 
 Setting up a machine for building and testing:
 
