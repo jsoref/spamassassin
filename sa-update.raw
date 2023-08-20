@@ -2155,7 +2155,7 @@ options will override B<--nogpg> and keep GPG verification enabled.
 If GPG is disabled, only SHA512 or SHA256 checksums are used to verify
 whether or not the downloaded archive has been corrupted, but it does not
 offer any form of security regarding whether or not the downloaded archive
-is legitimate (aka: non-modifed by evildoers).
+is legitimate (aka: non-modified by evildoers).
 
 Note: Only GnuPG is supported (ie: not any other PGP software).
 
