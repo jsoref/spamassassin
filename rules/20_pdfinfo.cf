@@ -62,7 +62,7 @@
 #
 # _PDFCOUNT_    - total number of pdf mime parts in the email
 # _PDFIMGCOUNT_ - total number of images found inside pdf mime parts
-# _PDFVERSION_  - PDF Version, space seperated if there are > 1 pdf attachments
+# _PDFVERSION_  - PDF Version, space separated if there are > 1 pdf attachments
 # _PDFNAME_     - Filenames as found in the mime headers of PDF parts
 # _PDFPRODUCER_ - Producer/Application that created the PDF(s)
 # _PDFAUTHOR_   - Author of the PDF
@@ -70,9 +70,9 @@
 # _PDFTITLE_    - Title of the PDF File, if available
 # _PDFIMGDIM_   - If PDF Contains images, the dimensions of them will be put here
 # _PDFIMGAREA_  - The total area of all combined images inside the PDF(s)
-# _PDFMD5_      - MD5 checksum of PDF(s) - space seperated
-# _PDFMD5FUZZY1_- Fuzzy1 MD5 checksum of PDF(s) - space seperated
-# _PDFMD5FUZZY2_- Fuzzy2 MD5 checksum of PDF(s) - space seperated
+# _PDFMD5_      - MD5 checksum of PDF(s) - space separated
+# _PDFMD5FUZZY1_- Fuzzy1 MD5 checksum of PDF(s) - space separated
+# _PDFMD5FUZZY2_- Fuzzy2 MD5 checksum of PDF(s) - space separated
 #
 # Example add_header lines
 #
