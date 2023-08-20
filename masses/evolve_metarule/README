@@ -30,7 +30,7 @@ Config parameters:
 	Path to the compressed matrix containing the rule hits.
 	Default: hits.dat
 
-  -r rules_fule
+  -r rules_file
 	Path to the file containing the rule names corresponding to columns		in the compressed matrix.
 	Default: rules.dat
 

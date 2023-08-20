@@ -237,7 +237,7 @@ void usage () {
 			"\n"
 			"Config parameters:\n"
 			"  -h hits_file\n"
-			"  -r rules_fule\n"
+			"  -r rules_file\n"
 			"\nFitness function parameters:\n"
 			"  -m maximum_relevant_hits\n"
 			"  -t target_num_rules\n"
