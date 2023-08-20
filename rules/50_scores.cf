@@ -666,7 +666,7 @@ endif
 ###########################################################################
 
 # Scores for tests that are scored manually or with isolated rescore runs.
-# Most are net tests, userconf tests, tests occuring with very low frequency,
+# Most are net tests, userconf tests, tests occurring with very low frequency,
 # or tests with many false positives.
 
 # GTUBE - Generic Test for Unsolicited Bulk Email
