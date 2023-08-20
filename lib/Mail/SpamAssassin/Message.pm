@@ -1008,7 +1008,7 @@ sub _parse_multipart {
       #  Is $self->{mime_boundary_state}->{$boundary}-- needed here?
       #  Could "missing end boundary" be a useful rule? Mark it somewhere?
       #  If SA processed truncated message from amavis etc, this could also
-      #  be hit legimately..
+      #  be hit legitimately..
       if (!$found_end_boundary) {
         # TODO: This is duplicate code from few pages down below..
         while (length ($_) > MAX_BODY_LINE_LENGTH) {
