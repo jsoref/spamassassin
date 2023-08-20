@@ -1027,7 +1027,7 @@ spamassassin (2.01-1) unstable; urgency=low
 spamassassin (1.5-5) unstable; urgency=low
 
   * Fixed postinst (Closes: #123954)
-  * Fixed typo in init. (I really need to learn to spel!) (Closes: #124077)
+  * Fixed typo in init. (I really need to learn to spell!) (Closes: #124077)
   * Fixed the dpkg dependency to 1.8.1 (Closes: #123320 again!)
   * Disables foreign character set tests by default (bug 126073, but
     still have to deal with other half)
