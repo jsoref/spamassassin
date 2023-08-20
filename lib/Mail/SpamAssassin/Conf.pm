@@ -3807,7 +3807,7 @@ for SpamAssassin to do - long evaluation of other rules may grant queries
 additional time.
 
 If a parameter 'zone' is specified (it must end with a letter, which
-distinguishes it from other numeric parametrs), then the setting only
+distinguishes it from other numeric parameters), then the setting only
 applies to DNS queries against the specified DNS domain (host, domain or
 RBL (sub)zone).  Matching is case-insensitive, the actual domain may be a
 subdomain of the specified zone.
