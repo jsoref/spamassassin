@@ -3656,7 +3656,7 @@ tags.
 
 Capturing can be done in any body/rawbody/header/uri/full rule that uses a
 regex for matching (not eval rules).  Standard Perl named capture group
-format C<(?E<lt>NAMEE<gt>pattern)> must be used, as described in
+format C<(?E<lt>NAME<gt>pattern)> must be used, as described in
 L<https://perldoc.perl.org/perlre#(?%3CNAME%3Epattern)>.
 
 Example, capturing a tag named C<BODY_HELLO_NAME>:
