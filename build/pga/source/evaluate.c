@@ -49,7 +49,7 @@ privately owned rights.
 
 /*U****************************************************************************
    PGASetEvaluation - Set the evaluation function value for a string to a
-   specified value.  Also sets the evaulation up to date flag to PGA_TRUE.
+   specified value.  Also sets the evaluation up to date flag to PGA_TRUE.
 
    Category: Fitness & Evaluation
 
