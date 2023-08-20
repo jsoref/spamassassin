@@ -136,7 +136,7 @@ RULE: foreach my $rule (sort keys %ruleIfPlugins) {
           moveRule(\@sf, $rule, $ruleAtLine-1, $ifpluginStartLine, $ifpluginEndLine-2);
         }
       }
-      # once we move the rule we move to the next one, reseting the tracking vars (above)
+      # once we move the rule we move to the next one, resetting the tracking vars (above)
       next RULE;
     }
 
