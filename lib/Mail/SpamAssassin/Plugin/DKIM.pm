@@ -625,7 +625,7 @@ sub check_dkim_dependable {
   return $pms->{dkim_signatures_dependable};
 }
 
-# mosnomer, old synonym for check_dkim_valid, kept for compatibility
+# misnomer, old synonym for check_dkim_valid, kept for compatibility
 sub check_dkim_verified {
   return check_dkim_valid(@_);
 }
