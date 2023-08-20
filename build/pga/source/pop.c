@@ -67,7 +67,7 @@ privately owned rights.
                   the srted array.
 
    Output:
-      An inteneral array of indices sorted according to one of three
+      An internal array of indices sorted according to one of three
       criteria is created.
 
    Example:
