@@ -592,7 +592,7 @@ OTHER CHANGES
 - use /var/lock/subsys/spamd instead of /var/lock/subsys/spamassassin for
   rc script, so that 'service spamd status' will work;
 
-- re-download MIRRRORED.BY files at least once a week, or if
+- re-download MIRRORED.BY files at least once a week, or if
   'sa-update --refreshmirrors' switch is used;
 
 - input delimiter $/ can be corrupted by a plugin, localize $/ and $\ before
