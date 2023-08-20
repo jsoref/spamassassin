@@ -38,7 +38,7 @@ privately owned rights.
 */
 
 /*****************************************************************************
-*     FILE: pop.c: This file contains systme routines that act on entire
+*     FILE: pop.c: This file contains system routines that act on entire
 *                  populations.
 *
 *     Authors: David M. Levine, Philip L. Hallstrom, David M. Noelle,

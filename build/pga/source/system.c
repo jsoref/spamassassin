@@ -38,7 +38,7 @@ privately owned rights.
 */
 
 /*****************************************************************************
-*     FILE: system.c: This file contains systme routines such as errors and
+*     FILE: system.c: This file contains system routines such as errors and
 *                     exits
 *
 *     Authors: David M. Levine, Philip L. Hallstrom, David M. Noelle,
