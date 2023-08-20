@@ -89,7 +89,7 @@ Configure and build a debug sequential library on the rs6000 architecture.
 ###############################################################################
 AC_INIT(source/pga.c)
 ARCH=""                         # architecture type
-PARALLEL=0                      # parallel libray, or use stub routines?
+PARALLEL=0                      # parallel library, or use stub routines?
 OPTIMIZE=1                      # optimized?
 CPPFLAGS=""                     # flags to send to the C preprocessor
 LDFLAGS=""                      # link flags

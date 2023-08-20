@@ -218,7 +218,7 @@ esac
 configure_args="$*"
 
 ARCH=""                         # architecture type
-PARALLEL=0                      # parallel libray, or use stub routines?
+PARALLEL=0                      # parallel library, or use stub routines?
 OPTIMIZE=1                      # optimized?
 CPPFLAGS=""                     # flags to send to the C preprocessor
 LDFLAGS=""                      # link flags
