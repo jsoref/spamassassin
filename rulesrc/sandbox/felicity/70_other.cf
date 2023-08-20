@@ -157,7 +157,7 @@ body TVD_VISIT_PHARMA           /Online Ph.rmacy/i
 describe TVD_VISIT_PHARMA       Body mentions online pharmacy
 
 header TVD_SUBJ_OWE Subject =~ /^\s*(?:\w+\s+)+you\s+(?:\w+\s+)*(?:owe|indebted)\s+(?:\w+\s+)+an\s*other/i
-describe TVD_SUBJ_OWE  Subject line states that the recipieint is in debt
+describe TVD_SUBJ_OWE  Subject line states that the recipient is in debt
 
 #  0.153   0.1870   0.0000    1.000   0.64    0.01  TVD_DOLLARS_US
 body TVD_DOLLARS_US /\s\d[\d.,]+US/
