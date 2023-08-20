@@ -56,7 +56,7 @@ foreach my $index (0..3) {
 }
 ok($error);
 
-# BAZ should have an descenting score 0, -1.1, -2.2, -3.3
+# BAZ should have an descending score 0, -1.1, -2.2, -3.3
 $error = 1;
 foreach my $index (0..3) {
   my $shouldbe = 1 - ($index+1 + $index/10);
