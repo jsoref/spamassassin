@@ -52,7 +52,7 @@ Changes in Version 1.0
 	9)  The configure script argument -arch AIX has been replaced with
             -arch rs6000.
 
-        10)  The configure script now accepts the -cflags and -flags switchs to
+        10)  The configure script now accepts the -cflags and -flags switches to
             supply options to the C and FORTRAN compiler, respectively.
 
 	11)  Changed PGATRUE and PGAFALSE to PGA_TRUE and PGA_FALSE.
