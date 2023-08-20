@@ -20,7 +20,7 @@ candidate body rules.
 It selects rule sets based on combined hit rates, false positive rates and
 a desired number of rules.
 
-This program requres the GAUL: Genetic Algorithm Utility Library which can be
+This program requires the GAUL: Genetic Algorithm Utility Library which can be
 obtained from http://gaul.sourceforge.net/.  It is licensed under the GPL.
 
 2.  OPTIONS
