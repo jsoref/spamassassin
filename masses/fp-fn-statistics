@@ -47,7 +47,7 @@ a result of the false positives and negatives mentioned above. This
 calculation takes into the value of lambda, which represents the cost
 of recovering a false positive, where 1 indicates a message is tagged
 only, 9 means the message is mailed back to sender asking for a token
-(TMDA style) and 999 means a message is delted. The default, 5,
+(TMDA style) and 999 means a message is deleted. The default, 5,
 represents the message being moved to an infrequently read folder.
 
 B<fp-fn-statistics> can also save false positive and false negatives
