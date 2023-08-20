@@ -393,7 +393,7 @@ if (!$opt_client) {
   $AIopts->{'scan_progress_sub'} = \&showdots_blip;
   $AIopts->{'opt_want_date'} = ! $opt_n;
 
-  # ensure that scanprob stuff is predictable and reproducable
+  # ensure that scanprob stuff is predictable and reproducible
   if (defined $opt_scanprob && $opt_scanprob < 1.0) {
     srand(1);
   }
