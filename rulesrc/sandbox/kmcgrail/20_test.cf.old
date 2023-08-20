@@ -76,7 +76,7 @@ score           KAM_1LINE       2.5
 
 #CAN SPAM
 body            KAM_CANSPAM     /(full compliance with the U.S. Federal-?Can-?Spam-Act|provides CAN-SPAM compliant email)/is
-describe        KAM_CANSPAM     SPAM = Lack of Consent not a Legal Defintion
+describe        KAM_CANSPAM     SPAM = Lack of Consent not a Legal Definition
 score           KAM_CANSPAM     1.0
 
 #GIFT CARDS
