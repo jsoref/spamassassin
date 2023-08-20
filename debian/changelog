@@ -789,7 +789,7 @@ spamassassin (2.54-1) unstable; urgency=low
       Fixed pyzor reporting (Closes: #184574)
   * Tightened up logcheck messages, for use in
     /etc/logcheck/ignore.d.paranoid (Closes: #187742)
-  * Applied patch from Andre Luis Lopes to fix pt_BR tranlations.
+  * Applied patch from Andre Luis Lopes to fix pt_BR translations.
       (Closes: #187745)
   * Added french debconf translation (From Christian Perrier
       <bubulle@debian.org>) (Closes: #190113)
