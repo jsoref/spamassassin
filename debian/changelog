@@ -597,7 +597,7 @@ spamassassin (2.99pre3.0.0svn20040525-1) experimental; urgency=low
       Fix sa-learn on filenames with spaces (Closes: #218004)
       Fixed which IPs to lookup in DNSBLs (Closes: #227828)
       _STARS_ works in Subject line (Closes: #239979)
-      Make --lint catch misspeld scores (Closes: #214880)
+      Make --lint catch misspelled scores (Closes: #214880)
       Allow combining of spamassassin -d and -t (Closes: #192779)
       Removed -w option from spamassassin (Closes: #216255)
       Remove -P from spamassassin manpage (Closes: #234584)
