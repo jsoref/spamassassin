@@ -2382,7 +2382,7 @@ sub client_mode {
 
           # if the messages isn't in our cache use the supplied path instead
           if (!$opt_cs_cache || !$cache_success) {
-	    # in paths_only mode, there's no kluging between formats since we're
+	    # in paths_only mode, there's no kludging between formats since we're
 	    # reading the same corpus, however we do still need to track server
 	    # message number to message data so our results will be useable.
             $real{$d[3]} = \@d;
