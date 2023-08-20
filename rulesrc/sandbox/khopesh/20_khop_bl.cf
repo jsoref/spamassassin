@@ -62,7 +62,7 @@
 #
 ## IP Space allocated before RIRs, mostly to corporations in the United States.
 ## from iana source at 20100524 via command
-## (note, it doesn't collaps ranges, e.g. [1234567] -> [1-7] )
+## (note, it doesn't collapse ranges, e.g. [1234567] -> [1-7] )
 ## perl -w -mRegexp::Assemble -e 'open (IANA, "<ipv4-address-space.txt"); my $re = Regexp::Assemble->new; while (<IANA>) { next if /RESERVED|IANA|whois\.(?:ripe|arin|apnic|afrinic|lacnic)\.net/; next unless m{^\s*\d{3}/\d+\s}; chomp; print "$_\n"; s:/8.*| |^0+::g; $re->add($_); } print "$re\n"'
 #header  __RCVD_VIA_NON_RIR     X-Spam-Relays-External =~ /^\[ ip=(?:0(?:1[1235-9]|2[012689]|3[02-58]|4[034578]|5[2-7]|0[34689])|21[45])\.\d/
 #header  __RCVD_VIA_NON_RIR_E   X-Spam-Relays-External  =~ /\[ ip=(?:0(?:1[1235-9]|2[012689]|3[02-58]|4[034578]|5[2-7]|0[34689])|21[45])\.\d/
