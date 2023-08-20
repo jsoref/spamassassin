@@ -67,7 +67,7 @@ The -help flag causes this usage guide to be printed.
 
 Example 1:
 ----------
-Configure and build for parallel operation on the sun4 architectue.  MPI is
+Configure and build for parallel operation on the sun4 architecture.  MPI is
 in /usr/local/mpi; the MPI library is /usr/local/mpi/lib/sun4/ch_p4/libmpi.a.
 
   configure -arch sun4 -mpilib /usr/local/mpi/lib/sun4/ch_p4/libmpi.a \
