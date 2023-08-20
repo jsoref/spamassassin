@@ -5444,7 +5444,7 @@ sub clone {
   }
 
   # deal with $conf->{scores}, it needs to be a reference into the scoreset
-  # hash array dealy.  Do it at the end since scoreset_current isn't set
+  # hash array.  Do it at the end since scoreset_current isn't set
   # otherwise.
   $dest->{scores} = $dest->{scoreset}->[$dest->{scoreset_current}];
 
