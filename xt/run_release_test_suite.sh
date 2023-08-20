@@ -12,7 +12,7 @@
 # The root* tests will be skipped because this script will not run as root
 # Use sudo make test TEST_FILES="t/root*.t" to run just those tests separately
 
-# All command line arguments passed to this script are pasased to the call to prove
+# All command line arguments passed to this script are passed to the call to prove
 
 if [ "$(id -u)" -eq 0 ]; then echo Do ont run this as root; exit 1; fi
 
