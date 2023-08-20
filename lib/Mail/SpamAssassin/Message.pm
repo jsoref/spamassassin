@@ -896,7 +896,7 @@ sub parse_body {
 
 	  # now this is the sneaky bit ... steal the sub-message's parse_queue
 	  # and add it to ours.  then we'll handle the sub-message in our
-	  # normal loop and get all the glory.  muhaha.  :)
+	  # normal loop and get all the glory.  muahaha.  :)
 	  push(@{$self->{'parse_queue'}}, @{$msg_obj->{'parse_queue'}});
 	  delete $msg_obj->{'parse_queue'};
 
