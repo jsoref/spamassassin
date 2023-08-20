@@ -1106,7 +1106,7 @@ sub extract_ipv4_addr_from_string {
 {
   my($hostname, $fq_hostname);
 
-# get the current host's unqalified domain name (better: return whatever
+# get the current host's unqualified domain name (better: return whatever
 # Sys::Hostname thinks our hostname is, might also be a full qualified one)
   sub hostname {
     return $hostname if defined($hostname);
