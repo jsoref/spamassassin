@@ -38,4 +38,4 @@ Windows is tested using Strawberry Perl, of which the latest release is 5.32. If
 
 Jobs run using the database option postgres or mysql will only run the various sql tests. Jobs run using the none option for database will run all the other tests.
 
-Some tests, especially some that rely on network access such as t/dnsbl.t, seem to fail occassionally, especially when you are running many jobs simultaneously. After all the jobs of a workflow have completed, you can rerun just those that have failed by clicking on the **Re-run jobs** button in the overview page for the jobs, and then selecting **Re-run failed jobs**. Repeat until jobs that seem to be only intermittent failures have successfully passed.
+Some tests, especially some that rely on network access such as t/dnsbl.t, seem to fail occasionally, especially when you are running many jobs simultaneously. After all the jobs of a workflow have completed, you can rerun just those that have failed by clicking on the **Re-run jobs** button in the overview page for the jobs, and then selecting **Re-run failed jobs**. Repeat until jobs that seem to be only intermittent failures have successfully passed.
