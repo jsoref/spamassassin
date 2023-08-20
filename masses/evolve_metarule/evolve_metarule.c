@@ -47,7 +47,7 @@ double penalty_exponent = 9.0;
 /* GA parameters */
 /* The number of individuals in the population */
 int population_size = 100;
-/* The maximal number of generations that the simluation is to run for.	*/
+/* The maximal number of generations that the simulation is to run for.	*/
 int max_generations = 10000;
 /* The probability of a cross-over. */
 double crossover_prob = 1.0;
