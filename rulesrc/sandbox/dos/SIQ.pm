@@ -328,7 +328,7 @@ option and the TTL provided in the SIQ response will be used.
 
 =item siq_oi_workaround		(0|1)		(default: 0)
 
-As of March 5, 2006, Oubtbound Index does not yet include octets 8-11 (TTL,
+As of March 5, 2006, Outbound Index does not yet include octets 8-11 (TTL,
 Confidence and Extra-Length values) as specified by the draft in their
 responses.
 
