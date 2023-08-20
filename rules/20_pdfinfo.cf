@@ -45,7 +45,7 @@
 #   0.6 - added easypdf producer rule and more no body text metas
 #       - tags support added, see USING TAGS below.
 #   0.5 - added fuzzy test 7
-#   0.4 - added new fuzzy for encyprted pdf image spams.
+#   0.4 - added new fuzzy for encrypted pdf image spams.
 #       - added rule to check for encryption
 #   0.3 - added rules based on the new pdf_match_details() function
 #       - added additional fuzzy md5 rules
