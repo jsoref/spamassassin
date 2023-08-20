@@ -210,7 +210,7 @@ void PGASetRestartFrequencyValue(PGAContext *ctx, int numiter)
          ctx->ga.restartFreq = numiter;
     else
          PGAError(ctx, "PGASetRestartFrequencyValue: Invalid value for "
-                  "restart freqency:", PGA_FATAL, PGA_INT, (void *) &numiter);
+                  "restart frequency:", PGA_FATAL, PGA_INT, (void *) &numiter);
 
     PGADebugExited("PGASetRestartFrequencyValue");
 }
