@@ -1547,7 +1547,7 @@ sub spawn {
       }
     }
 
-    # If the child lives to get here, it will die ...  Muhaha.
+    # If the child lives to get here, it will die ...  Muahaha.
     exit;
   }
 }
