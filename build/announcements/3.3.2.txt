@@ -151,7 +151,7 @@ Bug #6565: check_rbl_sub rules - all dots need to be escaped
 Bug #6578: Move TLD regexp to RegistrarBoundaries and make FreeMail use it
 
 Bug #6392: fix one more case of a 'goto into a construct' this one
-occured with sa-compile
+occurred with sa-compile
 
 Bug #6443: Metadata Headers are Case-Sensitive
 

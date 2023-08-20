@@ -1,6 +1,6 @@
 /******************************************************************************
 *     FILE: pgapack.h: This file contains all constant and structure
-*                      definitions definitions for PGAPack as well as all
+*                      definitions for PGAPack as well as all
 *                      function declarations.
 *     Authors: David M. Levine, Philip L. Hallstrom, David M. Noelle,
 *              Brian P. Walenz
@@ -228,7 +228,7 @@
 
 
 /*****************************************
-*       INDIVIDUAL STRUTURE              *
+*       INDIVIDUAL STRUCTURE             *
 *****************************************/
 
 typedef struct {                    /* primary population data structure   */

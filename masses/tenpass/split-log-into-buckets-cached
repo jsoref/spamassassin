@@ -55,7 +55,7 @@ foreach my $out (@outs) {
   }
 }
 
-srand (1);      # explicitly static seed, for reproducability
+srand (1);      # explicitly static seed, for reproducibility
 
 open (IN, "<$input") or die "cannot open $input";
 while (<IN>) {

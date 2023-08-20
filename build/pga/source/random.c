@@ -345,7 +345,7 @@ int PGAGetRandomSeed(PGAContext *ctx)
 
 /*U****************************************************************************
    PGASetRandomSeed - set a seed for the random number generator.  The
-   default is to use a random seed.  Specifying a seed exlicitly allows
+   default is to use a random seed.  Specifying a seed explicitly allows
    for reproducibility of runs.
 
    Category: Utility

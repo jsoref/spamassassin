@@ -855,7 +855,7 @@
 #
 #
 #body     FB_FAKE_NUMBERS        /\$\d\d?O\s*[MBT]/i
-#describe FB_FAKE_NUMBERS        Looks like numbers with O's insted of 0's
+#describe FB_FAKE_NUMBERS        Looks like numbers with O's instead of 0's
 ###score    FB_FAKE_NUMBERS      3.494
 ##counts   FB_FAKE_NUMBERS          948s/0h of 207630 corpus (200121s/7509h FT) 12/13/05
 ##counts   FB_FAKE_NUMBERS          0s/0h of 25005 corpus (15981s/9024h FVGT) 11/03/06
@@ -2271,7 +2271,7 @@
 #
 #
 #rawbody  FR_DOT_FEVER_5         /(?:[a-z ']{2,35}\s[.,]\s){5}/
-#describe FR_DOT_FEVER_5         Lots of dots inbetween letters.
+#describe FR_DOT_FEVER_5         Lots of dots in between letters.
 ###score    FR_DOT_FEVER_5               3.9
 ##counts   FR_DOT_FEVER_5           0s/0h of 17415 corpus (9736s/7679h FT) 01/03/06
 ##counts   FR_DOT_FEVER_5           1s/0h of 25499 corpus (16409s/9090h FVGT) 11/04/06

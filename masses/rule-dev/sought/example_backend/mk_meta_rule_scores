@@ -50,7 +50,7 @@ sub end_subrule_block {
   my $outscore=$defaultscore;
   $outscore = $scoremap{$currentthreshold} if defined $scoremap{$currentthreshold};
   #print "#current th: $currentthreshold outscore=$outscore";
-  #reset threshhold
+  #reset threshold
   $currentthreshold=undef;
 
 

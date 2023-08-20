@@ -280,7 +280,7 @@ sub am_running_on_windows {
 ###########################################################################
 
 # untaint a path to a file, e.g. "/home/jm/.spamassassin/foo",
-# "C:\Program Files\SpamAssassin\tmp\foo", "/home/õüt/etc".
+# "C:\Program Files\SpamAssassin\tmp\foo", "/home/ï¿½ï¿½t/etc".
 #
 # TODO: this does *not* handle locales well.  We cannot use "use locale"
 # and \w, since that will not detaint the data.  So instead just allow the
@@ -1106,7 +1106,7 @@ sub extract_ipv4_addr_from_string {
 {
   my($hostname, $fq_hostname);
 
-# get the current host's unqalified domain name (better: return whatever
+# get the current host's unqualified domain name (better: return whatever
 # Sys::Hostname thinks our hostname is, might also be a full qualified one)
   sub hostname {
     return $hostname if defined($hostname);
@@ -2360,7 +2360,7 @@ sub get_my_locales {
 
 ###########################################################################
 
-# bug 5612: work around for bugs in Berkeley db 4.2
+# bug 5612: workaround for bugs in Berkeley db 4.2
 #
 # on 4.2 having the __db.[DBNAME] file will cause an loop that will never finish
 # on 4.3+ the loop will timeout after 301 open attempts, but we will still
@@ -2641,7 +2641,7 @@ sub _valid_parsed_address {
 
 #
 # v0.1, improved internal parser, no support for comments in strange
-# places or nested comments, but handled a large corpus atleast 99% the
+# places or nested comments, but handled a large corpus at least 99% the
 # same as Email::Address::XS and in some cases even better (retains some
 # more name/addr info, even when not fully valid).
 #

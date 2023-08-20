@@ -568,7 +568,7 @@ void PGASetDebugLevel(PGAContext *ctx, int level)
 }
 
 /*U****************************************************************************
-   PGAClearDebugLevel - Turn off a debul level.  Only valid if PGAPack
+   PGAClearDebugLevel - Turn off a debug level.  Only valid if PGAPack
    was compiled to include debugging calls.  See the user guide for details.
 
    Category: Debugging
@@ -672,7 +672,7 @@ void PGAClearDebugLevelByName(PGAContext *ctx, char *funcname)
 /*I****************************************************************************
    PGAGetDebugLevelOfName - returns the debug level of the named function
    Internally, it performs a binary search on the run-time sorted list of
-   fucntions in PGAFuncIndex.
+   functions in PGAFuncIndex.
 
    Inputs:
        ctx       - context variable

@@ -3,7 +3,7 @@ description: 'Setup macOS runner for SpamAssassin build and test'
 runs:
   using: 'composite'
   steps:
-    - name: remove default user group membershipp in root group
+    - name: remove default user group membership in root group
       run: |
         # Note this only takes effect in steps that run with sudo -u runner
         sudo dseditgroup -o edit -d runner -t user wheel

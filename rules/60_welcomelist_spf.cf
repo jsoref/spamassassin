@@ -100,7 +100,7 @@ def_welcomelist_from_spf   *@ebay.com
 def_welcomelist_from_spf   *@foolsubs.com
 def_welcomelist_from_spf   *@match.com
 
-# bugtraq: can contain malicious Javascript etc.
+# bugtraq: can contain malicious JavaScript etc.
 def_welcomelist_from_spf   *@securityfocus.com
 
 def_welcomelist_from_spf   *@mediaunspun.imakenews.net
@@ -141,7 +141,7 @@ def_whitelist_from_spf   *@ebay.com
 def_whitelist_from_spf   *@foolsubs.com
 def_whitelist_from_spf   *@match.com
 
-# bugtraq: can contain malicious Javascript etc.
+# bugtraq: can contain malicious JavaScript etc.
 def_whitelist_from_spf   *@securityfocus.com
 
 def_whitelist_from_spf   *@mediaunspun.imakenews.net

@@ -239,7 +239,7 @@ module IO::Socket::INET6 is used, or eventually the IO::Socket::INET is
 used as last resort.
 
 If spamd fails to start with an 'Address already in use' message, please
-install perl module IO::Socket::IP, or deintall IO::Socket::INET6, or
+install perl module IO::Socket::IP, or deinstall IO::Socket::INET6, or
 specify a socket bind address explicitly with a spamd --listen option.
 See bug 6953 for details.
 

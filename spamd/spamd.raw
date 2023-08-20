@@ -24,7 +24,7 @@ use re 'taint';
 
 my @ORIG_INC_OPTS;
 BEGIN {
-  # bug 8030 - Save what is in @INC to capture any -I arguments passed in to use at SIGHUP restart
+  # bug 8030 - Save what is in @INC to capture any passed in -I arguments to use at SIGHUP restart
   # This is done before any use lib statements add anything else to @INC
   my %orig_inc;
   for (my $i = $#INC; $i >=0; $i--) {
@@ -1233,7 +1233,7 @@ unless ($clients_per_child > 1) {
 # See Bug 6837: establishing a __DIE__ handler should be done after
 # most modules have been loaded, as the $^S cannot distinguish
 # true failures from eval attempt failures within a 'require'-d module.
-# If the problem persists in some late-lodaded modules, we may need
+# If the problem persists in some late-loaded modules, we may need
 # to tighten the condition to something like 'if defined $^S && !$^S'.
 #
 # redirect __WARN__ and __DIE__
@@ -1513,7 +1513,7 @@ sub spawn {
       if ($copy_config_p) {
         # use a timeout!  There are bugs in Storable on certain platforms
         # that can cause spamd to hang -- see bug 3828 comment 154.
-        # we don't use Storable any more, but leave this in -- just
+        # we don't use Storable anymore, but leave this in -- just
         # in case.
 	# bug 4699: this is the alarm that often ends up with an empty $@
 
@@ -1547,7 +1547,7 @@ sub spawn {
       }
     }
 
-    # If the child lives to get here, it will die ...  Muhaha.
+    # If the child lives to get here, it will die ...  Muahaha.
     exit;
   }
 }
@@ -2242,7 +2242,7 @@ sub dotell {
   my @did_set;
   my @did_remove;
 
-  # bug 5740 Don't bayes learn if global configs disabkle bayes,
+  # bug 5740 Don't bayes learn if global configs disable bayes,
   #  also give user some control with userprefs bayes_learn_during_report option
 
   if (defined $spamtest->{bayes_scanner} && $spamtest->{conf}->{bayes_learn_during_report}) {

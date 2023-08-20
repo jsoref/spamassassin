@@ -915,7 +915,7 @@ reputation and count are reported in addition.
 
 Identificators and additional data will only be added to the description on a
 message's initial scan.  Re-processing a previously already scanned message
-will not list the individual idenficators and their respective reputation
+will not list the individual identificators and their respective reputation
 values used originally.
 
 This option is disabled by default for now, due to potential formatting issues

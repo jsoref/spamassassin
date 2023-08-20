@@ -278,7 +278,7 @@ IPv6 SUPPORT
 
 SPAMC
 
-- Mail::SpamAssasin::Client ping may erroneously result in broken pipe;
+- Mail::SpamAssassin::Client ping may erroneously result in broken pipe;
   bump spamc protocol version to 1.5, updated spamd, spamc and Client.pm;
 
 - added -n / --connect-timeout switch to spamc, allowing to separate
@@ -647,7 +647,7 @@ OTHER CHANGES
 - moved rc script to /var/lock/subsys/spamd instead of
   /var/lock/subsys/spamassassin so 'service spamd status' will work;
 
-- added feature to re-download MIRRRORED.BY files at least once a week, or if
+- added feature to re-download MIRRORED.BY files at least once a week, or if
   'sa-update --refreshmirrors' switch is used;
 
 - input delimiter $/ can be corrupted by a plugin, localize $/ and $\ before

@@ -747,7 +747,7 @@ sub _get_autolearn_points {
 
   my $conf = $self->{conf};
 
-  # This function needs to use use sum($score[scoreset % 2]) not just {score}.
+  # This function needs to use sum($score[scoreset % 2]) not just {score}.
   # otherwise we shift what we autolearn on and it gets really weird.  - tvd
   my $orig_scoreset = $conf->get_score_set();
   my $new_scoreset = $orig_scoreset;
@@ -2528,7 +2528,7 @@ sub get {
 # The delimiters for start of a URI in TBird are @(`{|[\"'<>,\s   in OE they are ("<\s
 #
 # Tbird allows .,?';-! in a URI but ignores [.,?';-!]* at the end.
-# TBird's end delimiters are )`{}|[]"<>\s but ) is only an end delmiter if there is no ( in the URI
+# TBird's end delimiters are )`{}|[]"<>\s but ) is only an end delimiter if there is no ( in the URI
 # OE only uses space as a delimiter, but ignores [~!@#^&*()_+`-={}|[]:";'<>?,.]* at the end.
 #
 # Both TBird and OE decide that a URI is an email address when there is '@' character embedded in it.

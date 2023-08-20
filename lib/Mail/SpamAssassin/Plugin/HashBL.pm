@@ -195,7 +195,7 @@ Optional subtest regexp to match DNS answer (default: '^127\.').
 
 =item header RULE check_hashbl_attachments('bl.example.invalid/A', 'OPTS', '^127\.')
 
-Check all all message attachments (mimeparts) from DNS list.
+Check all message attachments (mimeparts) from DNS list.
 
 Optional DNS query type can be appended to list with /A (default) or /TXT.
 

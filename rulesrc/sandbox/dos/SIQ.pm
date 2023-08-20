@@ -92,7 +92,7 @@ limitations under the License.
 Built-in caching is used, so queries against the same domain and IP pair will
 not incur the expense (both time and reputation service provider charges) of
 an additional query.  Note that each SpamAssassin child process maintains its
-own idependent cache which is not shared with other children and lasts only
+own independent cache which is not shared with other children and lasts only
 for the lifetime of the current child.  The cache life time is configurable.
 
 =head1 PRIVACY CONCERNS
@@ -328,7 +328,7 @@ option and the TTL provided in the SIQ response will be used.
 
 =item siq_oi_workaround		(0|1)		(default: 0)
 
-As of March 5, 2006, Oubtbound Index does not yet include octets 8-11 (TTL,
+As of March 5, 2006, Outbound Index does not yet include octets 8-11 (TTL,
 Confidence and Extra-Length values) as specified by the draft in their
 responses.
 

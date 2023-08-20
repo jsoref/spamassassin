@@ -118,7 +118,7 @@ rmtree( glob "~/.spamassassin/sa-compile.cache". { safe => 1 }); # reset test
 # -------------------------------------------------------------------
 
 sub re2c_version_new_enough {
-  #check if re2c exiss and if it is 0.12.0 or greater
+  #check if re2c exists and if it is 0.12.0 or greater
 
   my $re2c_ver = untaint_cmd("re2c -V 2>&1");
   if (!defined $re2c_ver || $re2c_ver =~ /^$/) {

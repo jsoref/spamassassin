@@ -228,7 +228,7 @@ $mailsa->{lint_callback} = sub {
 
   # ignore non-rule-issue lint failures
   return if ($opts{msg} =~ /(?:
-        score\sset\sfor\snon-existent|
+        score\sset\sfor\snonexistent|
         description\sexists
     )/x);
 

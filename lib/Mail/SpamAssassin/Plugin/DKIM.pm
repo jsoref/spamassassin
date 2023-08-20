@@ -625,7 +625,7 @@ sub check_dkim_dependable {
   return $pms->{dkim_signatures_dependable};
 }
 
-# mosnomer, old synonym for check_dkim_valid, kept for compatibility
+# misnomer, old synonym for check_dkim_valid, kept for compatibility
 sub check_dkim_verified {
   return check_dkim_valid(@_);
 }
@@ -1179,7 +1179,7 @@ sub _check_dkim_adsp {
         $practices_as_string = 'valid a. d. signature';
 
       } elsif ($pms->{dkim_author_sig_tempfailed}->{$author_domain}) {
-        dbg("dkim: adsp ignored, tempfail varifying author domain signature");
+        dbg("dkim: adsp ignored, tempfail verifying author domain signature");
         $practices_as_string = 'pub key tempfailed, ignored';
 
       } elsif ($pms->{dkim_has_any_author_sig}->{$author_domain} &&

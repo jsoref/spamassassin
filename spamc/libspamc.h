@@ -232,7 +232,7 @@ struct transport
 {
     int type;
 
-    const char *socketpath;	/* for UNIX dommain socket      */
+    const char *socketpath;	/* for UNIX domain socket       */
     const char *hostname;	/* for TCP sockets              */
 
     unsigned short port;	/* for TCP sockets              */

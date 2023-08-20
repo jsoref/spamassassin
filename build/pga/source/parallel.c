@@ -137,7 +137,7 @@ void PGARunGM(PGAContext *ctx, double (*f)(PGAContext *, int, int),
 
 
 /*I****************************************************************************
-   PGAEvaluateSeq - Internal evalution function.  Evaluates all strings
+   PGAEvaluateSeq - Internal evaluation function.  Evaluates all strings
    that need to be evaluated using one processor.
 
    Category: Fitness & Evaluation

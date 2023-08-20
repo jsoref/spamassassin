@@ -70,7 +70,7 @@ edit /etc/default/spamassassin.
 
 If you intend to use Bayes sitewide, it is recommended that you set up
 an SQL-based Bayes storage module. (You may also want to store scores
-and other prefences in SQL too.) Please read the documentation in
+and other preferences in SQL too.) Please read the documentation in
 /usr/share/doc/spamassassin/sql/ for more information.
 
 Please note that SQL storage is not very private -- anyone that has
@@ -149,7 +149,7 @@ IPv6
 ----
 
 Some users have reported difficulty running spamd with an IPv6
-listening address. As a work around, please ensure you have
+listening address. As a workaround, please ensure you have
 libio-socket-inet6-perl installed.
 
  -- Duncan Findlay <duncf@debian.org>, Mon, 21 May 2007 23:53:57 -0400

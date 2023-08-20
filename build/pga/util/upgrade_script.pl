@@ -8,8 +8,8 @@
 #  out of it.
 #
 #  One thing to pay careful attention to is PGASetMutateOnlyNoCross.  This
-#  was replaced by two functions, PGASetMuataionOrCrossoverFlag and
-#  PGASetMuatationAndCrossoverFlag.  Here, we replace it with the first.
+#  was replaced by two functions, PGASetMutationOrCrossoverFlag and
+#  PGASetMutationAndCrossoverFlag.  Here, we replace it with the first.
 #
 #  Usage:
 #      upgrade_script.pl <FilesToUpgrade>

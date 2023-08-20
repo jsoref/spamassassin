@@ -51,7 +51,7 @@
 #tflags  __RCVD_VIA_LACNIC_E    nopublish
 #
 ## American Registry of Internet Numbers (ARIN)
-## (Canada, many Carribbean and North Atlantic islands, the United States)
+## (Canada, many Caribbean and North Atlantic islands, the United States)
 ## from https://www.arin.net/knowledge/ip_blocks.html at 20100524
 ## ... that page is out of date.  Using IANA page instead:
 ## https://www.iana.org/assignments/ipv4-address-space/ipv4-address-space.txt
@@ -62,7 +62,7 @@
 #
 ## IP Space allocated before RIRs, mostly to corporations in the United States.
 ## from iana source at 20100524 via command
-## (note, it doesn't collaps ranges, e.g. [1234567] -> [1-7] )
+## (note, it doesn't collapse ranges, e.g. [1234567] -> [1-7] )
 ## perl -w -mRegexp::Assemble -e 'open (IANA, "<ipv4-address-space.txt"); my $re = Regexp::Assemble->new; while (<IANA>) { next if /RESERVED|IANA|whois\.(?:ripe|arin|apnic|afrinic|lacnic)\.net/; next unless m{^\s*\d{3}/\d+\s}; chomp; print "$_\n"; s:/8.*| |^0+::g; $re->add($_); } print "$re\n"'
 #header  __RCVD_VIA_NON_RIR     X-Spam-Relays-External =~ /^\[ ip=(?:0(?:1[1235-9]|2[012689]|3[02-58]|4[034578]|5[2-7]|0[34689])|21[45])\.\d/
 #header  __RCVD_VIA_NON_RIR_E   X-Spam-Relays-External  =~ /\[ ip=(?:0(?:1[1235-9]|2[012689]|3[02-58]|4[034578]|5[2-7]|0[34689])|21[45])\.\d/
@@ -106,7 +106,7 @@
 #ifplugin Mail::SpamAssassin::Plugin::DNSEval # {
 #
 ## we have the non-lastext data; let's see how good it is if we clean it up a bit
-## we'll exclude anything that might have too much info relaying (mailling lists
+## we'll exclude anything that might have too much info relaying (mailing lists
 ## and freemail).  my intuition is 35-50% spam, 2-4% ham, but we could get lucky.
 ## the original version ensured multiple external relays and a hit in either
 ## spamcop or barracuda.  now i've added zen, and sorbs.

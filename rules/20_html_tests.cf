@@ -57,7 +57,7 @@ describe HTML_MISSING_CTYPE	Message is HTML without HTML Content-Type
 # rawbody HTML tests
 
 rawbody HIDE_WIN_STATUS		/<[^>]{1,1000}onMouseOver=[^>]{1,1000}window\.status=/i
-describe HIDE_WIN_STATUS	Javascript to hide URLs in browser
+describe HIDE_WIN_STATUS	JavaScript to hide URLs in browser
 
 rawbody __OBFUSCATING_COMMENT_A	/\w(?:<![^>]*>)+\w/
 rawbody __OBFUSCATING_COMMENT_B	/[^\s>](?:<![^>]*>)+[^\s<]/
@@ -68,12 +68,12 @@ describe OBFUSCATING_COMMENT	HTML comments which obfuscate text
 endif
 endif
 
-# spams that are assembled from a Javascript array
+# spams that are assembled from a JavaScript array
 # look for the XOR op
 rawbody __JS_FROMCHARCODE       /String\.fromCharCode\s*\(\s*\S+\s*\[\s*\S+\s*\]\s*\^/
 rawbody __JS_DOCWRITE           /document\.write/
 meta JS_FROMCHARCODE            (__JS_FROMCHARCODE && __JS_DOCWRITE)
-describe JS_FROMCHARCODE        Document is built from a Javascript charcode array
+describe JS_FROMCHARCODE        Document is built from a JavaScript charcode array
 
 # a good possible rule that may resurface
 # ! $ % ' ( ) , - . / : ; = ? @ _

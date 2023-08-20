@@ -204,7 +204,7 @@ sub parsed_metadata {
   return 1 if $self->{main}->{conf}->{skip_rbl_checks};
   return 1 if !$pms->is_dns_available();
 
-  # Process relaylists only once, not everytime in check_rbl_backend
+  # Process relaylists only once, not every time in check_rbl_backend
   #
   # ok, make a list of all the IPs in the untrusted set
   my @fullips = map { $_->{ip} } @{$pms->{relays_untrusted}};

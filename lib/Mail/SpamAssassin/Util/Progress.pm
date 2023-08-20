@@ -207,7 +207,7 @@ sub update {
   my $fh = $self->{fh};
   my $time_now = time();
 
-  # If nothing is passed in to update assume we are adding one to the prev_num_done value
+  # If nothing is passed into update(), assume we are adding one to the prev_num_done value
   unless(defined($num_done)) {
     $num_done = $self->{prev_num_done} + 1;
   }
@@ -269,7 +269,7 @@ sub final {
   my ($self, $num_done) = @_;
 
   # passing in $num_done is optional, and will most likely rarely be used,
-  # we should generally favor the data that has been passed in to update()
+  # we should generally favor the data that has been passed into update()
   unless (defined($num_done)) {
     $num_done = $self->{num_done};
   }

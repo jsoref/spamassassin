@@ -36,7 +36,7 @@ There are four options that can be passed to the perceptron program.
 	set.  It does this by adding 1 + (number of tests hit) * 
 	ham_preference instances of non-spam messages to the training set.
 	This is intended to reduce false positives by encouraging the
-	training program to look at the harder-to-clasify ham messages 
+	training program to look at the harder-to-classify ham messages 
 	more often.  By default, this parameter is 2.0.
 
   -e num_epochs
@@ -82,7 +82,7 @@ linear transfer function:
 
 [1]	f(x) = bias + sum_{i=1}^{n} w_i * x_i
 
-This is quite similar to how the SpamAssasin score system works.  If you 
+This is quite similar to how the SpamAssassin score system works.  If you 
 set the bias to be 0, w_i to be the score for rule i and x_i to be whether 
 or not rule i is activated by a given message, the transfer function will 
 return the score of the message.  

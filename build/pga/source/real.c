@@ -455,7 +455,7 @@ int PGARealMutation( PGAContext *ctx, int p, int pop, double mr )
          /* randomly choose an allele   */
          if ( PGARandomFlip(ctx, mr) ) {
 
-             /* generate on range, or calculate multplier */
+             /* generate on range, or calculate multiplier */
              switch (ctx->ga.MutationType) {
              case PGA_MUTATION_RANGE:
                  c[i] = PGARandomUniform(ctx, ctx->init.RealMin[i],
@@ -751,7 +751,7 @@ void PGARealPrintString (PGAContext *ctx, FILE *fp, int p, int pop)
 
 
 /*I****************************************************************************
-   PGARealCopyString - Copy one real-valued string string to another
+   PGARealCopyString - Copy one real-valued string to another
 
    Inputs:
       ctx - context variable

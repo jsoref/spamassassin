@@ -290,7 +290,7 @@ void PGASetCrossoverProb( PGAContext *ctx, double crossover_prob)
 
 /*U****************************************************************************
    PGASetUniformCrossoverProb - Probability used in uniform crossover
-   to specify that an allele value value be selected from a particular
+   to specify that an allele value be selected from a particular
    parent. The default is 0.6.  The crossover type must have been set
    to PGA_CROSSOVER_UNIFORM with PGASetCrossoverType for this function
    call to have any effect.

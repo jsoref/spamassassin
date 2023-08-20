@@ -1689,12 +1689,12 @@ sub _compute_prob_for_token {
 ###########################################################################
 # If a token is neither hammy nor spammy, return 0.
 # For a spammy token, return the minimum number of additional ham messages
-# it would have had to appear in to no longer be spammy.  Hammy tokens
-# are handled similarly.  That's what the function does (at the time
-# of this writing, 31 July 2003, 16:02:55 CDT).  It would be slightly
+# it would have had to appear in order to no longer be spammy.  Hammy
+# tokens are handled similarly.  That's what the function does (at the
+# time of this writing, 31 July 2003, 16:02:55 CDT).  It would be slightly
 # more useful if it returned the number of /additional/ ham messages
-# a spammy token would have to appear in to no longer be spammy but I
-# fear that might require the solution to a cubic equation, and I
+# a spammy token would have to appear in order to no longer be spammy but
+# I fear that might require the solution to a cubic equation, and I
 # just don't have the time for that now.
 
 sub _compute_declassification_distance {

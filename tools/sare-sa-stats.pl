@@ -28,7 +28,7 @@
 # ./sa-stats -r postmaster
 #    - this would give all stats for postmaster users,
 #      regardless of which domain it was for.  handy if you
-#      have alot of domain aliases
+#      have a lot of domain aliases
 #
 # ./sa-stats -r @domain
 #    - this would give all stats for the domain specified.

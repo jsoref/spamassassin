@@ -6,7 +6,7 @@ It is intended to provide instructions and a checklist for the release manager.
 This document should also be useful to downstream packagers, although they would
 ignore all the details here that have to do with specifics of the Apache release process.
 The section on setting up a build and test environment might be useful to someone
-having dificulty installing SpamAssassin from source on their own machine.
+having difficulty installing SpamAssassin from source on their own machine.
 
 Setting up a machine for building and testing:
 
@@ -16,7 +16,7 @@ installation being visible to and interfering with the build or test processes.
 Also some of the tests have the potential of interfering with running processes associated
 with the system-installed SpamAssassin.
 
-The safest course of action for an official release buld is to use a (virtual) machine
+The safest course of action for an official release build is to use a (virtual) machine
 made specifically for the purpose. Detailed instructions for installing a build environment
 can be found on the Apache SpamAssassin wiki at https://cwiki.apache.org/confluence/x/lRKhD
 
@@ -198,7 +198,7 @@ Run "svn status" to ensure you're building/releasing from a pristine
     files from MANIFEST, so it tests in the same environment as that of
     an unpacked distribution tar, without the presence of rules files
     that are not in MANIFEST. To get the same testing for the root tests
-    cd into the Mail-Spamassin* subdirectory that make disttest created and run
+    cd into the Mail-SpamAssassin* subdirectory that make disttest created and run
       sudo make test TEST_FILES="t/spamd_root*"
     You can similarly cd into that directory to re-run tests such as dcc.t
     that can fail due to temporary problems accessing a remote server. 
@@ -411,7 +411,7 @@ Run "svn status" to ensure you're building/releasing from a pristine
 - DNS Steps TBD - Talk to sysadmins@spamassassin.apache.org
 
 #- [X.Y.0 RELEASES ONLY]: NOTE: This may change, make sure this info is
-#  still accurate before changing this (preferrably find out BEFORE doing
+#  still accurate before changing this (preferably find out BEFORE doing
 #  an X.Y.0 release.  Update the mkupdates stuff:
 
 #  - Create an empty file for the new version number in
@@ -523,7 +523,7 @@ Run "svn status" to ensure you're building/releasing from a pristine
   once the mirrors have all updated. Also, if the old version that is obsoleted
   by the new release is deleted as we are instructed to do, then not having
   updated the website download pages will result in 404 links for all the
-  mirror sites that have already syncronized. It is probably fine to just wait
+  mirror sites that have already synchronized. It is probably fine to just wait
   a few hours for a number of sites to sync, and then just accept the possibility
   that there may be some people who try to download the new release and get a 404
   then try the backup mirror site which will probably be the main one which

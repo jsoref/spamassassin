@@ -199,7 +199,7 @@ sub check_blank_line_ratio {
 sub tvd_vertical_words {
   my ($self, $pms, $text, $min, $max) = @_;
 
-  # klugy
+  # kludgy
   $max = 101 if ($max >= 100);
 
   if (!defined $pms->{tvd_vertical_words}) {

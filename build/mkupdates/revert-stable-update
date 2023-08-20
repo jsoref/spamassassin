@@ -24,7 +24,7 @@
 # 4. /home/updatesd/svn/mkupdates-with-scores/revert-stable-update 1234567
 #
 # The script will copy the supplied update version 1234567 to a new
-# update version in order that it will superseed the current update.
+# update version in order that it will supersede the current update.
 # It will then test that it works with each stable .x version and
 # then update DNS records accordingly.  A cron job will be set to
 # update DNS in 16 minutes after completion of testing to give the

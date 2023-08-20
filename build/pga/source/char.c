@@ -132,7 +132,7 @@ char PGAGetCharacterAllele (PGAContext *ctx, int p, int pop, int i)
 
 /*U****************************************************************************
   PGASetCharacterInitType - sets a flag to specify whether the character
-  strings will be exclusively lowercase, exclusively uppercase, or a mixure
+  strings will be exclusively lowercase, exclusively uppercase, or a mixture
   of both cases.  Legal flags are PGA_CINIT_UPPER, PGA_CINIT_LOWER, and
   PGA_CINIT_MIXED.  Default is PGA_CINIT_LOWER.
 
@@ -546,7 +546,7 @@ void PGACharacterCopyString (PGAContext *ctx, int p1, int pop1, int p2,
 }
 
 /*I****************************************************************************
-   PGACharacterDuplicate - Returns true if string p1 in pop1 is a dublicate
+   PGACharacterDuplicate - Returns true if string p1 in pop1 is a duplicate
    of string p2 in pop2, else returns false.
    Assumes the strings are the same length.
 

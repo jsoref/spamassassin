@@ -57,7 +57,7 @@ extern char PGAProgram[100];
 
    Inputs:
       ctx  - context variable
-      argc - address of the count of the number of command line argumen
+      argc - address of the count of the number of command line arguments
       argv - array of command line arguments
 
    Outputs:

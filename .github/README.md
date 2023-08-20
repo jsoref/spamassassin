@@ -5,7 +5,7 @@ The [Apache SpamAssassin project](https://spamassassin.apache.org/ "Apache SpamA
 
 The .github directory containing this README file is not part of the Apache SpamAssassin release package. The files in this directory are intended for use by developers to run tests using GitHub's Actions facility on GitHub hosted runners.
 
-The Apache SpamAssassin Project Management Committe has not made any arrangements to use the resources allocated to the Apache Software Foundation by GitHub to run builds and tests. The actions defined in this directory are available for anyone, including active developers of SpamAssassin, to run in their personal GitHub fork of the repo. However, the inclusion of the files in this repository does not comprise a formal release of the software to the public.
+The Apache SpamAssassin Project Management Committee has not made any arrangements to use the resources allocated to the Apache Software Foundation by GitHub to run builds and tests. The actions defined in this directory are available for anyone, including active developers of SpamAssassin, to run in their personal GitHub fork of the repo. However, the inclusion of the files in this repository does not comprise a formal release of the software to the public.
 
 #### How to use
 
@@ -38,4 +38,4 @@ Windows is tested using Strawberry Perl, of which the latest release is 5.32. If
 
 Jobs run using the database option postgres or mysql will only run the various sql tests. Jobs run using the none option for database will run all the other tests.
 
-Some tests, especially some that rely on network access such as t/dnsbl.t, seem to fail occassionally, especially when you are running many jobs simultaneously. After all the jobs of a workflow have completed, you can rerun just those that have failed by clicking on the **Re-run jobs** button in the overview page for the jobs, and then selecting **Re-run failed jobs**. Repeat until jobs that seem to be only intermittent failures have successfully passed.
+Some tests, especially some that rely on network access such as t/dnsbl.t, seem to fail occasionally, especially when you are running many jobs simultaneously. After all the jobs of a workflow have completed, you can rerun just those that have failed by clicking on the **Re-run jobs** button in the overview page for the jobs, and then selecting **Re-run failed jobs**. Repeat until jobs that seem to be only intermittent failures have successfully passed.

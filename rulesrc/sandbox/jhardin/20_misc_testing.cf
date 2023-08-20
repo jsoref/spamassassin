@@ -890,7 +890,7 @@ header          RPT_SPAM_HDR            Report-SPAM =~ /./
 
 # observed in multiple spam
 header      TO_JOHNZY              TO =~ /johnzy_the_king\@hotmail\.com/i
-describe    TO_JOHNZY              To a spammy recipent
+describe    TO_JOHNZY              To a spammy recipient
 #score       TO_JOHNZY              3.00
 
 # Discussed on list and observed in spam 10/15/2010
@@ -934,7 +934,7 @@ describe    DG_SPAMMER_EMAIL_F     Recognized spammer email address in From: hea
 # Spammers can't include the real name successfully...
 body        __FORGED_FB_USERCP_01  /This message was intended for Want to control which emails you receive from Facebook\?/i
 
-# Javascript obfuscation noted by J. Brennan on the Users list 09/2010
+# JavaScript obfuscation noted by J. Brennan on the Users list 09/2010
 rawbody     OBFU_JVSCR_ESC         /document\.write\(unescape\(["'](?:%[0-9a-f]{2}){10}/i
 describe    OBFU_JVSCR_ESC         Injects content using obfuscated javascript
 #score       OBFU_JVSCR_ESC         2.75
@@ -1771,7 +1771,7 @@ tflags      UC_GIBBERISH_OBFU  publish
 # stop receiving these emails
 # Unsubscribe me from this list
 # We are not promoting any kind of SPAM.
-# recieve any kind promotional email form us
+# receive any kind promotional email form us
 # To stop receiving these emails
 # exclude yourself from further ad-messages
 # removal options
@@ -2367,7 +2367,7 @@ tflags         TW_GIBBERISH_MANY      publish
 
 # reported on users list 09/2014 jdebert <jdebert@garlic.com>
 header      RCVD_DBL_DQ                Received =~ /(?:\[\d+\.\d+\.\d+\.\d+\]){2}/
-describe    RCVD_DBL_DQ                Malformatted message header
+describe    RCVD_DBL_DQ                Malformed message header
 tflags      RCVD_DBL_DQ                publish
 
 # reported on users list 09/2014 George Johnson <georgejohnson@talaya.net>
@@ -2773,7 +2773,7 @@ header      __HAS_GMX_BULK             exists:X-Gmx-Bulk
 ifplugin Mail::SpamAssassin::Plugin::HTMLEval
   body       __HTML_TAG_BALANCE_CENTER     eval:html_tag_balance('center', '!= 0')
   meta       HTML_TAG_BALANCE_CENTER       __HTML_TAG_BALANCE_CENTER && !__RCD_RDNS_MAIL_MESSY && !__RCD_RDNS_SMTP_MESSY 
-  describe   HTML_TAG_BALANCE_CENTER       Malformatted HTML
+  describe   HTML_TAG_BALANCE_CENTER       Malformed HTML
 endif
 
 
@@ -3026,7 +3026,7 @@ score      RDNS_NUM_TLD_ATCHNX         3.000	# limit
 tflags     RDNS_NUM_TLD_ATCHNX         publish
 
 meta       MALF_HTML_B64               MIME_BASE64_TEXT && HTML_MIME_NO_HTML_TAG 
-describe   MALF_HTML_B64               Malformatted base64-encoded HTML content
+describe   MALF_HTML_B64               Malformed base64-encoded HTML content
 score      MALF_HTML_B64               3.500	# limit
 tflags     MALF_HTML_B64               publish
 
@@ -3111,7 +3111,7 @@ if can(Mail::SpamAssassin::Conf::feature_bug6558_free)
   score      ZW_OBFU_BITCOIN            2.500	# limit
 
   meta       ZW_OBFU_FROMTOSUBJ         __UNICODE_OBFU_ZW && FROM_IN_TO_AND_SUBJ 
-  describe   ZW_OBFU_FROMTOSUBJ         Obfuscated text + from in to and subject
+  describe   ZW_OBFU_FROMTOSUBJ         Obfuscated text + From in To and Subject
   score      ZW_OBFU_FROMTOSUBJ         2.000	# limit
 
   meta       ZW_OBFU_FREEM              __UNICODE_OBFU_ZW && __freemail_hdr_replyto 
@@ -3779,7 +3779,7 @@ tflags     MIXED_HREF_CASE             publish
 
 meta       __LOTSA_MIXED_CASE_TAGS     (__MIXED_FONT_CASE + __MIXED_CENTER_CASE + __MIXED_AREA_CASE + __MIXED_IMG_CASE_JH + __MIXED_HREF_CASE_JH) > 1
 
-# phishing content for now, may go primarly legit at some point
+# phishing content for now, may go primarily legit at some point
 uri        __URI_FIREBASEAPP           m,://[^./]+\.firebaseapp\.com/,
 uri        __URI_WEBAPP                m,://[^./]+\.web\.app/,
 meta       URI_FIREBASEAPP             __URI_FIREBASEAPP || __URI_WEBAPP

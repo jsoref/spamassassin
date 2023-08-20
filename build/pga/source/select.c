@@ -75,7 +75,7 @@ privately owned rights.
 ****************************************************************************U*/
 void PGASelect( PGAContext *ctx, int popix )
 {
-    int i;                   /* not to intefere with dummy argument        */
+    int i;                   /* not to interfere with dummy argument       */
     int j;                   /* random number                              */
     int temp;                /* for shuffling selected indices US          */
     PGAIndividual *pop;      /* pointer to appropriate population          */

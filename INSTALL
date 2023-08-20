@@ -125,7 +125,7 @@ https://wiki.apache.org/spamassassin/UsedViaProcmail
      https://spamassassin.apache.org/gtube/
 
    If your test emails don't get through to you, immediately rename your
-   .forward file until you figure out cause of the the problem, so you
+   .forward file until you figure out cause of the problem, so you
    don't lose incoming email.
 
    Note: one possible cause for this is the use of smrsh on the MTA system;
@@ -302,7 +302,7 @@ is too low for them to be used.
   - Net::LibIDN (from CPAN)
 
     Provides mapping between Internationalized Domain Names (IDN) in Unicode
-    and ASCII-compatible encoding (ACE) for use in DNS and comparisions. 
+    and ASCII-compatible encoding (ACE) for use in DNS and comparisons. 
     The module is optional, but without it Unicode IDN names found in mail
     will not be suitable for DNS queries and welcome/blocklisting.
 

@@ -876,7 +876,7 @@ void PGAPrintContextVariable ( PGAContext *ctx, FILE *fp )
      switch(ctx->ga.PercentSame)
      {
      case PGA_UNINITIALIZED_INT:
-          fprintf(fp, "?UNINITIALZED?\n");
+          fprintf(fp, "?UNINITIALIZED?\n");
           break;
      default:
           fprintf(fp, "%d\n", ctx->ga.PercentSame);

@@ -38,7 +38,7 @@ privately owned rights.
 */
 
 /*****************************************************************************
-*     FILE: pop.c: This file contains systme routines that act on entire
+*     FILE: pop.c: This file contains system routines that act on entire
 *                  populations.
 *
 *     Authors: David M. Levine, Philip L. Hallstrom, David M. Noelle,
@@ -67,7 +67,7 @@ privately owned rights.
                   the srted array.
 
    Output:
-      An inteneral array of indices sorted according to one of three
+      An internal array of indices sorted according to one of three
       criteria is created.
 
    Example:
@@ -192,7 +192,7 @@ int PGAGetPopSize (PGAContext *ctx)
       ctx - context variable
 
    Outputs:
-      The maximum number number of strings to replace each generation
+      The maximum number of strings to replace each generation
 
    Example:
       PGAContext *ctx;

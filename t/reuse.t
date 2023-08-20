@@ -79,7 +79,7 @@ ok_system("$perl_path -w ../masses/mass-check -c=$localrules --reuse --file $wor
   'NEW_RULE' => '',
   'OTHER_RULE' => '',
   'RENAMED_RULE' => '',
-  'NONEXISTANT_RULE' => '',
+  'NONEXISTENT_RULE' => '',
   'BODY_RULE_2' => '',
   'SCORED_RULE' => '',
 );
@@ -103,7 +103,7 @@ ok_system("$perl_path -w ../masses/mass-check -c=$localrules --file $workdir/mai
   'NEW_RULE' => '',
   'OTHER_RULE' => '',
   'RENAMED_RULE' => '',
-  'NONEXISTANT_RULE' => '',
+  'NONEXISTENT_RULE' => '',
   'BODY_RULE_2' => '',
   'SCORED_RULE' => '',
 );
@@ -127,7 +127,7 @@ ok_system("$perl_path -w ../masses/mass-check -c=$localrules --reuse --file $wor
 );
 %anti_patterns = (
   'BODY_RULE_1' => '',
-  'NONEXISTANT_RULE' => '',
+  'NONEXISTENT_RULE' => '',
 );
 
 checkfile("$workdir/reuse.out", \&patterns_run_cb);
@@ -189,7 +189,7 @@ EOF
     if ($x_spam_status) {
         $msg .= <<END;
 X-Spam-Status: Yes, score=15.3 required=5.0 tests=BODY_RULE_2,
-	NONEXISTANT_RULE,OTHER_RULE,OLD_RULE_2,OLD_RULE_3
+	NONEXISTENT_RULE,OTHER_RULE,OLD_RULE_2,OLD_RULE_3
 END
     }
 

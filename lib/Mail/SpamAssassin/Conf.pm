@@ -1904,7 +1904,7 @@ appear in configuration files multiple times, the last setting prevails.
 Option I<v4> declares resolver capable of returning IPv4 (A) records. 
 Option I<v6> declares resolver capable of returning IPv6 (AAAA) records. 
 One would set I<nov6> if the resolver is filtering AAAA responses.  NOTE:
-these options only refer to I<resolving capabilies>, there is no other
+these options only refer to I<resolving capabilities>, there is no other
 meaning like whether the IP address of resolver itself is IPv4 or IPv6.
 
 Option I<edns> (or I<edns0>) may take a value which specifies a requestor's
@@ -3656,7 +3656,7 @@ tags.
 
 Capturing can be done in any body/rawbody/header/uri/full rule that uses a
 regex for matching (not eval rules).  Standard Perl named capture group
-format C<(?E<lt>NAMEE<gt>pattern)> must be used, as described in
+format C<(?E<lt>NAME<gt>pattern)> must be used, as described in
 L<https://perldoc.perl.org/perlre#(?%3CNAME%3Epattern)>.
 
 Example, capturing a tag named C<BODY_HELLO_NAME>:
@@ -3807,7 +3807,7 @@ for SpamAssassin to do - long evaluation of other rules may grant queries
 additional time.
 
 If a parameter 'zone' is specified (it must end with a letter, which
-distinguishes it from other numeric parametrs), then the setting only
+distinguishes it from other numeric parameters), then the setting only
 applies to DNS queries against the specified DNS domain (host, domain or
 RBL (sub)zone).  Matching is case-insensitive, the actual domain may be a
 subdomain of the specified zone.
@@ -4083,7 +4083,7 @@ This option gives the password used by the above DSN.
 
 Whether to call the services_authorized_for_username plugin hook in BayesSQL.
 If the hook does not determine that the user is allowed to use bayes or is
-invalid then then database will not be initialized.
+invalid then the database will not be initialized.
 
 NOTE: By default the user is considered invalid until a plugin returns
 a true value.  If you enable this, but do not have a proper plugin
@@ -5444,7 +5444,7 @@ sub clone {
   }
 
   # deal with $conf->{scores}, it needs to be a reference into the scoreset
-  # hash array dealy.  Do it at the end since scoreset_current isn't set
+  # hash array.  Do it at the end since scoreset_current isn't set
   # otherwise.
   $dest->{scores} = $dest->{scoreset}->[$dest->{scoreset_current}];
 

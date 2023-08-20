@@ -361,7 +361,7 @@ spamassassin (3.0.99pre3.1.0+rc1-1) experimental; urgency=low
     demand
     - New plugins: DomainKeys (off by default), MIMEHeader, ReplaceTags,
     WhiteListSubject
-    - Razor2, DCC disabled by deafult because they are no longer free for
+    - Razor2, DCC disabled by default because they are no longer free for
     non-personal use
     - AWL is now a plugin (Closes: #292610)
     - Includes sa-update which can be used to update rules between
@@ -371,7 +371,7 @@ spamassassin (3.0.99pre3.1.0+rc1-1) experimental; urgency=low
     - Stop checking for long descriptions (Closes: #274194)
     - No longer uses Storable (Closes: #293485)
     - Minor doc fixes (Closes: #276621, #290660)
-    - Avoid unitialized value error in Reporter.pm (Closes: #290615)
+    - Avoid uninitialized value error in Reporter.pm (Closes: #290615)
     - Logging and error messages improved throughout (Closes: #318349)
     - SIGHUP now works when running with -u on a privileged port (Closes:
     #296682)
@@ -439,7 +439,7 @@ spamassassin (3.0.2-1) unstable; urgency=low
 
   * New upstream release (Closes: #284663, #286595)
     - Number of URLs now limited for URIDNSBL plugin (Closes: #279180)
-    - Handles obscure exim Recieved: header format (Closes: #279504)
+    - Handles obscure exim Received: header format (Closes: #279504)
   * Updated logcheck messages (Closes: #281560)
   * Updated README.Debian to explain a bit more about configuring
     spamd as non-root and for sitewide bayes. (Closes: #271870, #273187)
@@ -454,7 +454,7 @@ spamassassin (3.0.1-1) unstable; urgency=low
   * New upstream release
     - Fix problems with broken configs with spamd (Closes: #276366)
     - Fixes some memory consuming bugs (Closes: #275232, #222783)
-    - Fixes file descriptior issue with pyzor or dccifd and amavis (Closes: #273290)
+    - Fixes file descriptor issue with pyzor or dccifd and amavis (Closes: #273290)
   * Conflict with packages broken with SpamAssassin 3.0.0 (Closes:
     #274993)
   * Create PIDFILE option in /etc/default/spamassassin so that init
@@ -597,7 +597,7 @@ spamassassin (2.99pre3.0.0svn20040525-1) experimental; urgency=low
       Fix sa-learn on filenames with spaces (Closes: #218004)
       Fixed which IPs to lookup in DNSBLs (Closes: #227828)
       _STARS_ works in Subject line (Closes: #239979)
-      Make --lint catch misspeld scores (Closes: #214880)
+      Make --lint catch misspelled scores (Closes: #214880)
       Allow combining of spamassassin -d and -t (Closes: #192779)
       Removed -w option from spamassassin (Closes: #216255)
       Remove -P from spamassassin manpage (Closes: #234584)
@@ -789,7 +789,7 @@ spamassassin (2.54-1) unstable; urgency=low
       Fixed pyzor reporting (Closes: #184574)
   * Tightened up logcheck messages, for use in
     /etc/logcheck/ignore.d.paranoid (Closes: #187742)
-  * Applied patch from Andre Luis Lopes to fix pt_BR tranlations.
+  * Applied patch from Andre Luis Lopes to fix pt_BR translations.
       (Closes: #187745)
   * Added french debconf translation (From Christian Perrier
       <bubulle@debian.org>) (Closes: #190113)
@@ -954,10 +954,10 @@ spamassassin (2.20-2) unstable; urgency=low
 
 spamassassin (2.20-1) unstable; urgency=medium
 
-  * New upstream release. (Closess: #140300, #140910, #143324, #134669,
+  * New upstream release. (Closes: #140300, #140910, #143324, #134669,
     #136329, #140422, #140910)
   * This fixes the "razor 1.20-1 bug" (143324)
-  * New features. Yay! (including the -S (short-ciruit) flag for spamd)
+  * New features. Yay! (including the -S (short-circuit) flag for spamd)
   * Urgency=medium to beat razor 1.20-1 to woody.
 
  -- Duncan Findlay <duncf@rogers.com>  Sat, 20 Apr 2002 00:05:40 -0400
@@ -967,7 +967,7 @@ spamassassin (2.11-4) unstable; urgency=medium
   * "Fixes" configuration files "problem"/"bug." I'm really not happy with
     putting upstream rules and scores in /etc/spamassassin. But I guess I
     don't have a choice. Do I? (Closes: #141484)
-  * Fixes pathes in Mail::SpamAssassin::Conf docs. (Closes: #141172)
+  * Fixes paths in Mail::SpamAssassin::Conf docs. (Closes: #141172)
   * Fixes "spelling" mistake in description. (Closes: #141512)
 
  -- Duncan Findlay <duncf@rogers.com>  Sun,  7 Apr 2002 22:02:29 -0400
@@ -1027,7 +1027,7 @@ spamassassin (2.01-1) unstable; urgency=low
 spamassassin (1.5-5) unstable; urgency=low
 
   * Fixed postinst (Closes: #123954)
-  * Fixed typo in init. (I really need to learn to spel!) (Closes: #124077)
+  * Fixed typo in init. (I really need to learn to spell!) (Closes: #124077)
   * Fixed the dpkg dependency to 1.8.1 (Closes: #123320 again!)
   * Disables foreign character set tests by default (bug 126073, but
     still have to deal with other half)
@@ -1066,7 +1066,7 @@ spamassassin (1.5-2) unstable; urgency=low
 
   * Added Build-Depends for ia64 (bind-dev)  (Closes some bug yet to be
     filed)
-  * Clarfied README.Debian (Closes: #123194, #123240)
+  * Clarified README.Debian (Closes: #123194, #123240)
   * Fixed word_in_dictionary bug
   * Added warning to spamd users using an old version of dpkg
     (Closes: #123320)
