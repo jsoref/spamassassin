@@ -16,7 +16,7 @@ header __FROM_ALL_NUMS_FIX  From:addr =~ /^(?!(?:19|20)\d\d[01]\d[0-3]\d)\d+\@/
 header __FROM_ALL_HEX	    From:addr =~ /^(?!(?:19|20)\d\d[01]\d[0-3]\d)(?![0-9a-f]*[a-f]{3})[0-9a-f]+\@/
 
 header	 KHOP_BIG_TO_CC      ToCc =~ /(?:[^,\@]{1,60}\@[^,]{4,25},){10}/
-describe KHOP_BIG_TO_CC      Sent to 10+ recipients instaed of Bcc or a list
+describe KHOP_BIG_TO_CC      Sent to 10+ recipients instead of Bcc or a list
 
 # see also 70_sare_spoof.cf's __EBAY_ADDRESS:
 # header __EBAY_ADDRESS     From:addr =~ /[\@\.]ebay\.(?:com(?:\.au|\.cn|\.hk|\.my|\.sg)?|co\.uk|at|be|ca|fr|de|in|ie|it|nl|ph|pl|es|se|ch)/i
