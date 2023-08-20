@@ -65,7 +65,7 @@ privately owned rights.
 
   Example:
       Mutate the best string in the population, until 10 or more mutations
-      have occured.
+      have occurred.
 
       PGAContext *ctx;
       int p, count = 0;
