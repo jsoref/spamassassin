@@ -82,7 +82,7 @@ Content-Transfer-Encoding: 8bit
 
 EOF
 
-  # Characters that look like a fullstop
+  # Characters that look like a full stop
   my @delims = split(//, "\x{002E}\x{3002}\x{FF0E}\x{FF61}\x{FE52}\x{2024}");
   my $i = 0;
 
