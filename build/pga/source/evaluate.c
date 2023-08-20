@@ -239,7 +239,7 @@ int PGAGetEvaluationUpToDateFlag ( PGAContext *ctx, int p, int pop )
 }
 
 /*U****************************************************************************
-  PGAGetRealFromBinary - Interpets a binary string as encoding a real value
+  PGAGetRealFromBinary - Interprets a binary string as encoding a real value
   and returns the real value it represents.
 
   Category: Fitness & Evaluation
@@ -301,7 +301,7 @@ double PGAGetRealFromBinary(PGAContext *ctx, int p, int pop, int start,
 }
 
 /*U****************************************************************************
-  PGAGetRealFromGrayCode - interpets a binary reflected Gray code sequence in
+  PGAGetRealFromGrayCode - interprets a binary reflected Gray code sequence in
   a binary string as encoding a real value and returns the real value it
   represents.
 
@@ -489,7 +489,7 @@ void PGAEncodeRealAsGrayCode(PGAContext *ctx, int p, int pop, int start,
 
 
 /*U****************************************************************************
-  PGAGetIntegerFromBinary - interpets a binary string as encoding an integer
+  PGAGetIntegerFromBinary - interprets a binary string as encoding an integer
   value and returns the integer value it represents.
 
   Category: Fitness & Evaluation
@@ -552,7 +552,7 @@ int PGAGetIntegerFromBinary(PGAContext *ctx, int p, int pop, int start,
 }
 
 /*U****************************************************************************
-  PGAGetIntegerFromGrayCode - interpets a binary reflected Gray code sequence
+  PGAGetIntegerFromGrayCode - interprets a binary reflected Gray code sequence
   as encoding an integer value and returns the integer value it represents.
 
   Category: Fitness & Evaluation
