@@ -361,7 +361,7 @@ spamassassin (3.0.99pre3.1.0+rc1-1) experimental; urgency=low
     demand
     - New plugins: DomainKeys (off by default), MIMEHeader, ReplaceTags,
     WhiteListSubject
-    - Razor2, DCC disabled by deafult because they are no longer free for
+    - Razor2, DCC disabled by default because they are no longer free for
     non-personal use
     - AWL is now a plugin (Closes: #292610)
     - Includes sa-update which can be used to update rules between
