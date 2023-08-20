@@ -1233,7 +1233,7 @@ unless ($clients_per_child > 1) {
 # See Bug 6837: establishing a __DIE__ handler should be done after
 # most modules have been loaded, as the $^S cannot distinguish
 # true failures from eval attempt failures within a 'require'-d module.
-# If the problem persists in some late-lodaded modules, we may need
+# If the problem persists in some late-loaded modules, we may need
 # to tighten the condition to something like 'if defined $^S && !$^S'.
 #
 # redirect __WARN__ and __DIE__
