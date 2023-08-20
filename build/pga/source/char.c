@@ -132,7 +132,7 @@ char PGAGetCharacterAllele (PGAContext *ctx, int p, int pop, int i)
 
 /*U****************************************************************************
   PGASetCharacterInitType - sets a flag to specify whether the character
-  strings will be exclusively lowercase, exclusively uppercase, or a mixure
+  strings will be exclusively lowercase, exclusively uppercase, or a mixture
   of both cases.  Legal flags are PGA_CINIT_UPPER, PGA_CINIT_LOWER, and
   PGA_CINIT_MIXED.  Default is PGA_CINIT_LOWER.
 
