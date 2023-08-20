@@ -672,7 +672,7 @@ void PGAClearDebugLevelByName(PGAContext *ctx, char *funcname)
 /*I****************************************************************************
    PGAGetDebugLevelOfName - returns the debug level of the named function
    Internally, it performs a binary search on the run-time sorted list of
-   fucntions in PGAFuncIndex.
+   functions in PGAFuncIndex.
 
    Inputs:
        ctx       - context variable
