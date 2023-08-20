@@ -69,7 +69,7 @@ uri  LIVEFILESTORE_HTML  m~livefilestore.com/[^/]{0,100}/[^/]{0,20}\.html?$~
 # header  KB_RATWARE_OUTLOOK_BOT  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$([0-9a-f]{8})\$.{100,400}^Content-Type: multipart.[^;]{10,20}; boundary="----=_NextPart_000_...._\1\.\2/msi  # "
 
 
-# Some variants with varying fuzzyness, to investigate accuracy.
+# Some variants with varying fuzziness, to investigate accuracy.
 
 header  KB_RATWARE_OUTLOOK_16  ALL =~ /^Message-Id: <....([0-9a-f]{8})\$([0-9a-f]{8})\$.{100,400}boundary="----=_NextPart_000_...._\1\.\2/msi  # "
 
