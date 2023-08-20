@@ -523,7 +523,7 @@ Run "svn status" to ensure you're building/releasing from a pristine
   once the mirrors have all updated. Also, if the old version that is obsoleted
   by the new release is deleted as we are instructed to do, then not having
   updated the website download pages will result in 404 links for all the
-  mirror sites that have already syncronized. It is probably fine to just wait
+  mirror sites that have already synchronized. It is probably fine to just wait
   a few hours for a number of sites to sync, and then just accept the possibility
   that there may be some people who try to download the new release and get a 404
   then try the backup mirror site which will probably be the main one which
