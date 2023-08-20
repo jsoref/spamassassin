@@ -202,7 +202,7 @@ make_tarball_for_version() {
 
   if [[ -z "$RECENT" ]]; then
 
-    echo "Recent ruleset from mkupdate-with-scores (massheck) NOT found."
+    echo "Recent ruleset from mkupdate-with-scores (masscheck) NOT found."
     echo "Proceeding with a ruleset publish..."
 
     mv $tmpdir/update.tgz      $UPDDIR/${svnrev}.tar.gz            || exit $?
@@ -229,7 +229,7 @@ make_tarball_for_version() {
 
   else
 
-    echo "Recent ruleset from mkupdate-with-scores (massheck) found:"
+    echo "Recent ruleset from mkupdate-with-scores (masscheck) found:"
     ls -l $RECENT
     echo ""
 
