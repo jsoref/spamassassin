@@ -371,7 +371,7 @@ spamassassin (3.0.99pre3.1.0+rc1-1) experimental; urgency=low
     - Stop checking for long descriptions (Closes: #274194)
     - No longer uses Storable (Closes: #293485)
     - Minor doc fixes (Closes: #276621, #290660)
-    - Avoid unitialized value error in Reporter.pm (Closes: #290615)
+    - Avoid uninitialized value error in Reporter.pm (Closes: #290615)
     - Logging and error messages improved throughout (Closes: #318349)
     - SIGHUP now works when running with -u on a privileged port (Closes:
     #296682)
