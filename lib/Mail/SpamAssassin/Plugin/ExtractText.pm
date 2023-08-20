@@ -19,7 +19,7 @@
 
 =head1 NAME
 
-ExtractText - extracts text from documenmts.
+ExtractText - extracts text from documents.
 
 =head1 SYNOPSIS
 
