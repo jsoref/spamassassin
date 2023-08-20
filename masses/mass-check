@@ -1318,7 +1318,7 @@ sub generate_messages {
   }
 
   if (!$opt_cs_schedule_cache) {
-    # if we still have the temp file with the input messages open, we'll fillup
+    # if we still have the temp file with the input messages open, we'll fill up
     # out message output queue with messages from there.
     if ($tmpfd) {
       while (@tosend < $msgs) {
